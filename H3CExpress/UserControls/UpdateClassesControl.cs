@@ -1,17 +1,11 @@
 ﻿using DevExpress.XtraBars;
-using DevExpress.XtraEditors;
 using H3CExpress.Data.NewEntities;
 using H3CExpress.Views;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace H3CExpress.UserControls
 {
@@ -73,9 +67,9 @@ namespace H3CExpress.UserControls
             {
 
                 loadClasses(context);
-/*
-                listCourseComboBox.DisplayMember = "name";
-                listCourseComboBox.ValueMember = "id";*/
+                /*
+                                listCourseComboBox.DisplayMember = "name";
+                                listCourseComboBox.ValueMember = "id";*/
 
             }
         }
