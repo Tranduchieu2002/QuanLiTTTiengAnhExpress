@@ -14,7 +14,7 @@ namespace H3CExpress.Views
 {
     public partial class UpdateClass : DevExpress.XtraEditors.XtraForm
     {
-        public UpdateClass(int id)
+        public UpdateClass(int? id)
         {
             InitializeComponent();
             H3CExpress.FormSchema.UpdateClass updateClass = new H3CExpress.FormSchema.UpdateClass(id);

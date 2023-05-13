@@ -21,53 +21,11 @@ namespace H3CExpress.UserControls
         {
             InitializeComponent();
 
-            BindingList<Customer> dataSource = GetDataSource();
-            gridControl.DataSource = dataSource;
-            bsiRecordsCount.Caption = "RECORDS : " + dataSource.Count;
         }
         void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
         {
             gridControl.ShowRibbonPrintPreview();
         }
-        public BindingList<Customer> GetDataSource()
-        {
-            BindingList<Customer> result = new BindingList<Customer>();
-            result.Add(new Customer()
-            {
-                ID = 1,
-                Name = "ACME",
-                Address = "2525 E El Segundo Blvd",
-                City = "El Segundo",
-                State = "CA",
-                ZipCode = "90245",
-                Phone = "(310) 536-0611"
-            });
-            result.Add(new Customer()
-            {
-                ID = 2,
-                Name = "Electronics Depot",
-                Address = "2455 Paces Ferry Road NW",
-                City = "Atlanta",
-                State = "GA",
-                ZipCode = "30339",
-                Phone = "(800) 595-3232"
-            });
-            return result;
-        }
-        public class Customer
-        {
-            [Key, Display(AutoGenerateField = false)]
-            public int ID { get; set; }
-            [Required]
-            public string Name { get; set; }
-            public string Address { get; set; }
-            public string City { get; set; }
-            public string State { get; set; }
-            [Display(Name = "Zip Code")]
-            public string ZipCode { get; set; }
-            public string Phone { get; set; }
-        }
-
         private void gridControl_Click(object sender, EventArgs e)
         {
 
@@ -87,6 +45,7 @@ namespace H3CExpress.UserControls
                         };
             var a = users.Take(10).ToList();
             this.gridControl.DataSource = a;
+            bsiRecordsCount.Caption = "Tổng số lớp học : " + a.Count;
         }
 
         void loadClasses(NewAppContext context)
@@ -123,9 +82,9 @@ namespace H3CExpress.UserControls
 
         private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-            /*UpdateClass updateClass = new UpdateClass();
+            UpdateClass updateClass = new UpdateClass(null);
 
-            updateClass.ShowDialog();*/
+            updateClass.ShowDialog();
         }
 
         private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
