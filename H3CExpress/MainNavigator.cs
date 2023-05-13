@@ -9,6 +9,8 @@ namespace H3CExpress
 
         UpdateClassesControl updateClassesControl;
         CapNhatGiangVien updateGiangVien;
+        CapNhatNguoiDung updateNguoiDung;
+        CapNhatNhanVien updateNhanVien;
 
         public MainNavigator()
         {
@@ -44,6 +46,26 @@ namespace H3CExpress
                 LoadToPanel(updateGiangVien);
             }
             else updateGiangVien.BringToFront();
+        }
+
+        private void updateStudents_Click(object sender, EventArgs e)
+        {
+            if (updateNguoiDung == null)
+            {
+                updateNguoiDung = new CapNhatNguoiDung();
+                LoadToPanel(updateNguoiDung);
+            }
+            else updateNguoiDung.BringToFront();
+        }
+
+        private void updateEmps_Click(object sender, EventArgs e)
+        {
+            if (updateNhanVien == null)
+            {
+                updateNhanVien = new CapNhatNhanVien();
+                LoadToPanel(updateNhanVien);
+            }
+            else updateNhanVien.BringToFront();
         }
     }
 }
