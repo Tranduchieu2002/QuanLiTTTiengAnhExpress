@@ -36,7 +36,7 @@ namespace H3CExpress.Views
                 var userEdit = context.users.FirstOrDefault(u => u.id == idUserEdit);
                 if (userEdit == null)
                 {
-                    MessageBox.Show("Đã xảy ra lỗi!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Utils.ShowMessError("Đã xảy ra lỗi!!!");
                     return;
                 }
                 tbEmail.Text = userEdit.email;
@@ -52,62 +52,39 @@ namespace H3CExpress.Views
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string err = CheckAllTextboxValid();
-            err = err.Equals("") ? CheckAllComboboxValid() : err;
+            string err = Utils.AreAllTextBoxHasValue(this);
+            err = err.Equals("") ? Utils.AreAllComboBoxesSelected(this) : err;
             if (!err.Equals(""))
             {
-                MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Utils.ShowMessWarn(err);
                 return;
             }
 
             using (var dbContext = new NewAppContext())
             {
-                string genderText = cbGender.SelectedItem.ToString();
-                users newUser = new users
+                try
                 {
-                    password = tbPassword.Text,
-                    username = tbUserName.Text,
-                    email = tbEmail.Text,
-                    gender = genderText.Equals("Unknown") ? users.Gender.Unknown : genderText.Equals("Male") ? users.Gender.Male : users.Gender.Female,
-                    name = tbName.Text,
-                    roleId = Int32.Parse(cbRole.SelectedValue.ToString())
-                };
-                dbContext.users.Add(newUser);
-                MessageBox.Show("Thêm người dùng thành công!!!");
-                dbContext.SaveChanges();
-                resetAllTextBox();
-            }
-        }
+                    string genderText = cbGender.SelectedItem.ToString();
+                    users newUser = new users
+                    {
+                        password = tbPassword.Text,
+                        username = tbUserName.Text,
+                        email = tbEmail.Text,
+                        gender = genderText.Equals("Unknown") ? users.Gender.Unknown : genderText.Equals("Male") ? users.Gender.Male : users.Gender.Female,
+                        name = tbName.Text,
+                        roleId = Int32.Parse(cbRole.SelectedValue.ToString())
+                    };
+                    dbContext.users.Add(newUser);
+                    Utils.ShowMessInfo("Thêm người dùng thành công!!!");
+                    dbContext.SaveChanges();
+                    Utils.ClearTextBoxes(this);
+                }
+                catch
+                {
+                    Utils.ShowMessError("Thêm người dùng thất bại!!!");
+                }
 
-        public string CheckAllComboboxValid(string notify = "")
-        {
-            string err = "";
-            Guna2ComboBox[] comboBoxes = Controls.OfType<Guna2ComboBox>().ToArray();
-            foreach (Guna2ComboBox cb in comboBoxes)
-            {
-                if (cb.SelectedIndex >= 0) continue;
-                err = notify.Equals("") ? "Vui lòng nhập đầy đủ thông tin!!!" : notify;
-                break;
             }
-            return err;
-        }
-        public string CheckAllTextboxValid(string notify = "")
-        {
-            string err = "";
-            Guna2TextBox[] textboxes = Controls.OfType<Guna2TextBox>().ToArray();
-            foreach (Guna2TextBox tb in textboxes)
-            {
-                if (!tb.Enabled || !tb.Text.Equals("")) continue;
-                err = notify.Equals("") ? "Vui lòng nhập đầy đủ thông tin!!!" : notify;
-                break;
-            }
-            return err;
-        }
-
-        public void resetAllTextBox()
-        {
-            Guna2TextBox[] textboxes = Controls.OfType<Guna2TextBox>().ToArray();
-            foreach (Guna2TextBox tb in textboxes) tb.Text = "";
         }
 
         private void fUpadtePerson_Load(object sender, EventArgs e)
@@ -126,26 +103,33 @@ namespace H3CExpress.Views
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string err = CheckAllTextboxValid();
-            err = err.Equals("") ? CheckAllComboboxValid() : err;
+            string err = Utils.AreAllTextBoxHasValue(this);
+            err = err.Equals("") ? Utils.AreAllComboBoxesSelected(this) : err;
             if (!err.Equals(""))
             {
-                MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Utils.ShowMessWarn(err);
                 return;
             }
             using (var context = new NewAppContext())
             {
-                string genderText = cbGender.SelectedItem.ToString();
-                var userUpdate = context.users.Find(Int32.Parse(tbMaUser.Text));
-                if (userUpdate == null) return;
-                userUpdate.gender = genderText.Equals("Unknown") ? users.Gender.Unknown : genderText.Equals("Male") ? users.Gender.Male : users.Gender.Female;
-                userUpdate.email = tbEmail.Text;
-                userUpdate.name = tbName.Text;
-                userUpdate.roleId = Int32.Parse(cbRole.SelectedValue.ToString());
-                userUpdate.username = tbUserName.Text;
-                context.SaveChanges();
-                MessageBox.Show("Cập nhât thông tin thành công!!!");
-                this.Close();
+                try
+                {
+                    string genderText = cbGender.SelectedItem.ToString();
+                    var userUpdate = context.users.Find(Int32.Parse(tbMaUser.Text));
+                    if (userUpdate == null) return;
+                    userUpdate.gender = genderText.Equals("Unknown") ? users.Gender.Unknown : genderText.Equals("Male") ? users.Gender.Male : users.Gender.Female;
+                    userUpdate.email = tbEmail.Text;
+                    userUpdate.name = tbName.Text;
+                    userUpdate.roleId = Int32.Parse(cbRole.SelectedValue.ToString());
+                    userUpdate.username = tbUserName.Text;
+                    context.SaveChanges();
+                    Utils.ShowMessInfo("Cập nhât thông tin thành công!!!");
+                    this.Close();
+                }
+                catch
+                {
+                    Utils.ShowMessError("Cập nhât thông tin thất bại!!!");
+                }
             }
         }
     }

@@ -1,23 +1,39 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using H3CExpress.Data.NewEntities;
 using H3CExpress.Views;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
-using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace H3CExpress.UserControls
 {
-    public partial class CapNhatGiangVien : DevExpress.XtraEditors.XtraUserControl
+    public partial class CapNhatNguoiDung : DevExpress.XtraEditors.XtraUserControl
     {
-        int idxRowSelect = -1;
-        public CapNhatGiangVien()
+        public CapNhatNguoiDung()
         {
             InitializeComponent();
         }
 
-        private void CapNhatGiangVien_Load(object sender, System.EventArgs e)
+
+        private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            fUpadtePerson f = new fUpadtePerson("USR");
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+            loadData();
+        }
+
+        private void gridControl_Load(object sender, EventArgs e)
         {
             loadData();
         }
@@ -27,7 +43,7 @@ namespace H3CExpress.UserControls
             using (var context = new NewAppContext())
             {
                 this.gridControl1.DataSource = null;
-                var teacherList = context.users.Where(u => u.roles.Code == "Tea").Select(u =>
+                var teacherList = context.users.Where(u => u.roles.Code == "USR").Select(u =>
                    new
                    {
                        u.id,
@@ -35,21 +51,26 @@ namespace H3CExpress.UserControls
                        u.gender,
                        u.username,
                        u.email,
-                       chucvu = u.roles.Code,
+                       chucvu = u.roles.name,
                    });
                 var a = teacherList.Take(10).ToList();
                 this.gridControl1.DataSource = a;
             }
-
         }
 
-        private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
+        private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            fUpadtePerson f = new fUpadtePerson("Tea");
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-            loadData();
+            GridView gridView = gridControl1.MainView as GridView;
+            var selectRows = gridView.GetSelectedRows();
+            foreach (var rowHandle in selectRows)
+            {
+                var id = gridView.GetRowCellValue(rowHandle, "id").ToString();
+                fUpadtePerson f = new fUpadtePerson("USR", id);
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+                loadData();
+            }
         }
 
         private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
@@ -60,7 +81,7 @@ namespace H3CExpress.UserControls
             {
                 var id = int.Parse(gridView.GetRowCellValue(rowHandle, "id").ToString());
                 string name = gridView.GetRowCellValue(rowHandle, "name").ToString();
-                DialogResult r = Utils.ShowMessWarn("Bạn có muốn xóa giáo viên  " + name);
+                DialogResult r = Utils.ShowMessWarn("Bạn có muốn xóa User  " + name);
                 if (r == DialogResult.Cancel) return;
                 using (var context = new NewAppContext())
                 {
@@ -83,27 +104,6 @@ namespace H3CExpress.UserControls
         private void bbiRefresh_ItemClick(object sender, ItemClickEventArgs e)
         {
             loadData();
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-            this.idxRowSelect = e.RowIndex;
-        }
-
-        private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            GridView gridView = gridControl1.MainView as GridView;
-            var selectRows = gridView.GetSelectedRows();
-            foreach (var rowHandle in selectRows)
-            {
-                var id = gridView.GetRowCellValue(rowHandle, "id").ToString();
-                fUpadtePerson f = new fUpadtePerson("Tea", id);
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
-                loadData();
-            }
         }
     }
 }
