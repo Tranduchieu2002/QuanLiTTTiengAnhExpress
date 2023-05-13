@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace H3CExpress.UserControls
 {
@@ -65,12 +66,7 @@ namespace H3CExpress.UserControls
         {
             using (var context = new NewAppContext())
             {
-
                 loadClasses(context);
-                /*
-                                listCourseComboBox.DisplayMember = "name";
-                                listCourseComboBox.ValueMember = "id";*/
-
             }
         }
 
@@ -96,8 +92,39 @@ namespace H3CExpress.UserControls
                 UpdateClass updateClass = new UpdateClass(id);
 
                 updateClass.ShowDialog();
+
+                updateClass.Close();
             }
 
+        }
+
+        private void bbiRefresh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            using (var context = new NewAppContext())
+            {
+                loadClasses(context);
+            }
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var selectedRows = gridView.GetSelectedRows();
+
+            if(selectedRows.Count() == 0)
+            {
+                MessageBox.Show("Bạn chưa chọn lớp học ");
+                return;
+            } 
+            // Loop through the selected rows and do something with each row
+            foreach (var rowHandle in selectedRows)
+            {
+                // Get the values of the selected row using the row handle
+                var id = int.Parse(gridView.GetRowCellValue(rowHandle, "id").ToString());
+                AddStudentFromClass addStudentF = new AddStudentFromClass(id);
+                addStudentF.ShowDialog();
+
+                addStudentF.Close();
+            }
         }
     }
 }

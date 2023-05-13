@@ -178,34 +178,67 @@ namespace H3CExpress.FormSchema
             System.TimeSpan timeSpan = System.DateTime.Now.TimeOfDay - selectedTime.TimeOfDay;
             return timeSpan;
         }
-        private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private async void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bool valid = CheckAllTextboxValid();
 
             if (valid)
             {
-                int id = int.Parse(idEdit.Text.Trim());
-                string name = idEdit.Text.Trim();
-                string mota = idEdit.Text.Trim();
-                System.DateTime startDate = startDateEdit.DateTime;
-                System.DateTime endDate = endDateEdit.DateTime;
-                System.TimeSpan learingTime = getSelectedHours();
+                string idClass = (idEdit.Text.Trim());
+                string name = nameEdit.Text.Trim();
+                DateTime startDate = startDateEdit.DateTime;
+                DateTime endDate = endDateEdit.DateTime;
+                TimeSpan learingTime = getSelectedHours();
+                var teacherId = giaovienCbb.SelectedIndex == -1 ? -1 : int.Parse(giaovienCbb.SelectedValue.ToString());
 
-                using(var context= new NewAppContext())
+                using (var context= new NewAppContext())
                 {
-                    classes lophoc = context.classes.Find(id);
+                    if(string.IsNullOrEmpty(idClass)) {
 
+                        classes ClassIns = new classes
+                        {
+                            name = name,
+                            course_id = int.Parse(listCourseComboBox.SelectedValue.ToString()),
+                            start_time = startDate,
+                            end_time = endDate,
+                            learning_time = learingTime,
+                        };
 
+                        if (teacherId >= 0)
+                        {
+                            ClassIns.teacher_id = teacherId;
+                        }
 
+                        MessageBox.Show("adu " + teacherId + "  " + (listCourseComboBox.SelectedValue.ToString()));
+
+                        context.classes.Add(ClassIns);
+
+                        context.SaveChanges();
+
+                        MessageBox.Show("Tạo thành công lớp học " + ClassIns.name);
+
+                        classInstance = context.classes.Find(ClassIns.id);
+                        id = classInstance.id;
+                        return;
+                    }
+                    classes lophoc = context.classes.Find(int.Parse(idClass));
                     if (lophoc != null)
                     {
                         lophoc.name = name;
+                        lophoc.course_id = int.Parse(listCourseComboBox.SelectedValue.ToString());
                         lophoc.Status = Status.ACTIVE;
                         lophoc.end_time = endDate;
                         lophoc.learning_time = learingTime;
                         lophoc.start_time = startDate;
-
+                        if (teacherId > 0)
+                        {
+                            lophoc.teacher_id = teacherId;
+                        }
                     }
+
+                    context.SaveChanges();
+
+                    MessageBox.Show("Update thành công lớp học " + lophoc.name);
                 }
 
             }
@@ -214,6 +247,34 @@ namespace H3CExpress.FormSchema
         private void sisoLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(id != null)
+            {
+                using(var context = new NewAppContext())
+                {
+                    classes lophoc = context.classes.Find(id);
+
+                    if(lophoc != null)
+                    {
+                        context.classes.Remove(lophoc);
+
+                        context.SaveChanges();
+
+                    }
+
+                    classInstance = null;
+                    id = null;
+
+                    MessageBox.Show("Xóa lớp học thành công !");
+
+                    this.Hide();
+                }
+            } else {
+                    MessageBox.Show("Chưa có thông tin lớp học !");
+            }
         }
     }
 }

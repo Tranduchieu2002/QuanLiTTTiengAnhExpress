@@ -160,6 +160,12 @@
       <DependentUpon>UpdateClassesControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs" />
+    <Compile Include="Views\AddStudentFromClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddStudentFromClass.Designer.cs">
+      <DependentUpon>AddStudentFromClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\fUpadtePerson.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UpdateClassesControl.resx">
       <DependentUpon>UpdateClassesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddStudentFromClass.resx">
+      <DependentUpon>AddStudentFromClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\fUpadtePerson.resx">
       <DependentUpon>fUpadtePerson.cs</DependentUpon>
