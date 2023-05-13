@@ -1,10 +1,5 @@
-﻿using DevExpress.LookAndFeel;
-using DevExpress.Skins;
-using DevExpress.UserSkins;
-using H3CExpress.Views;
+﻿using H3CExpress.Views;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace H3CExpress
@@ -20,6 +15,7 @@ namespace H3CExpress
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
+            //Application.Run(new fUpadtePerson());
         }
     }
 }
