@@ -38,8 +38,7 @@
             this.updateStudents = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.updateEmps = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ScoreControl = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.updateScore = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.dgiaHVItem = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ReportControls = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.classReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.studentReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -118,6 +117,7 @@
             this.updateStudents.Name = "updateStudents";
             this.updateStudents.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.updateStudents.Text = "Cập nhật học viên";
+            this.updateStudents.Click += new System.EventHandler(this.updateStudents_Click);
             // 
             // updateEmps
             // 
@@ -125,26 +125,21 @@
             this.updateEmps.Name = "updateEmps";
             this.updateEmps.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.updateEmps.Text = "Cập nhật nhân viên";
+            this.updateEmps.Click += new System.EventHandler(this.updateEmps_Click);
             // 
             // ScoreControl
             // 
             this.ScoreControl.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.updateScore,
-            this.dgiaHVItem});
+            this.accordionControlElement1});
+            this.ScoreControl.Expanded = true;
             this.ScoreControl.Name = "ScoreControl";
             this.ScoreControl.Text = "Quản lí điểm";
             // 
-            // updateScore
+            // accordionControlElement1
             // 
-            this.updateScore.Name = "updateScore";
-            this.updateScore.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.updateScore.Text = "Cập nhật điểm";
-            // 
-            // dgiaHVItem
-            // 
-            this.dgiaHVItem.Name = "dgiaHVItem";
-            this.dgiaHVItem.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.dgiaHVItem.Text = "Đánh giá học viên";
+            this.accordionControlElement1.Expanded = true;
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Text = "Element1";
             // 
             // ReportControls
             // 
@@ -220,10 +215,9 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement updateStudents;
         private DevExpress.XtraBars.Navigation.AccordionControlElement updateEmps;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ScoreControl;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement updateScore;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement dgiaHVItem;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ReportControls;
         private DevExpress.XtraBars.Navigation.AccordionControlElement classReport;
         private DevExpress.XtraBars.Navigation.AccordionControlElement studentReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
     }
 }

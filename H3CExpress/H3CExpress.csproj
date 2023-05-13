@@ -65,6 +65,9 @@
     <Reference Include="DevExpress.Drawing.v22.2" />
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v22.2">
+      <HintPath>C:\Program Files\DevExpress 22.2\Components\Bin\Framework\DevExpress.XtraRichEdit.v22.2.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -159,6 +162,19 @@
     <Compile Include="UserControls\UpdateClassesControl.Designer.cs">
       <DependentUpon>UpdateClassesControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CapNhatNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CapNhatNguoiDung.Designer.cs">
+      <DependentUpon>CapNhatNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CapNhatNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CapNhatNhanVien.Designer.cs">
+      <DependentUpon>CapNhatNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
     <Compile Include="Validation.cs" />
     <Compile Include="Views\AddStudentFromClass.cs">
       <SubType>Form</SubType>
@@ -171,6 +187,12 @@
     </Compile>
     <Compile Include="Views\fUpadtePerson.Designer.cs">
       <DependentUpon>fUpadtePerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\fUpdateKhoaHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\fUpdateKhoaHoc.Designer.cs">
+      <DependentUpon>fUpdateKhoaHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
@@ -210,6 +232,12 @@
     <EmbeddedResource Include="UserControls\CapNhatGiangVien.resx">
       <DependentUpon>CapNhatGiangVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CapNhatNguoiDung.resx">
+      <DependentUpon>CapNhatNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CapNhatNhanVien.resx">
+      <DependentUpon>CapNhatNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CourseDatagridview.resx">
       <DependentUpon>CourseDatagridview.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\fUpadtePerson.resx">
       <DependentUpon>fUpadtePerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\fUpdateKhoaHoc.resx">
+      <DependentUpon>fUpdateKhoaHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
