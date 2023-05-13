@@ -123,9 +123,28 @@ namespace H3CExpress.UserControls
 
         private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-            UpdateClass updateClass = new UpdateClass();
+            /*UpdateClass updateClass = new UpdateClass();
 
-            updateClass.ShowDialog();
+            updateClass.ShowDialog();*/
+        }
+
+        private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            // Get the selected row(s)
+            var selectedRows = gridView.GetSelectedRows();
+
+            // Loop through the selected rows and do something with each row
+            foreach (var rowHandle in selectedRows)
+            {
+                // Get the values of the selected row using the row handle
+                var id = int.Parse(gridView.GetRowCellValue(rowHandle, "id").ToString());
+
+                // Do something with the row values
+                UpdateClass updateClass = new UpdateClass(id);
+
+                updateClass.ShowDialog();
+            }
+
         }
     }
 }

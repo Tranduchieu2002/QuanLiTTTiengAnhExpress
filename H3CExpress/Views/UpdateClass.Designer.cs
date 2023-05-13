@@ -28,19 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1014, 683);
+            this.panelControl1.TabIndex = 0;
             // 
             // UpdateClass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 683);
+            this.ClientSize = new System.Drawing.Size(1014, 683);
+            this.Controls.Add(this.panelControl1);
             this.Name = "UpdateClass";
             this.Text = "UpdateClass";
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }
