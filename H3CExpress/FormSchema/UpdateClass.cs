@@ -256,8 +256,11 @@ namespace H3CExpress.FormSchema
                 using(var context = new NewAppContext())
                 {
                     classes lophoc = context.classes.Find(id);
+                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                    if(lophoc != null)
+                    // Nếu người dùng chọn Yes, tiến hành xóa thông tin
+                    if (result == DialogResult.No) return;
+                    if (lophoc != null)
                     {
                         context.classes.Remove(lophoc);
 

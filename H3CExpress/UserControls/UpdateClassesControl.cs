@@ -126,5 +126,52 @@ namespace H3CExpress.UserControls
                 addStudentF.Close();
             }
         }
+
+        private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            var selectedRows = gridView.GetSelectedRows();
+
+            if (selectedRows.Count() == 0)
+            {
+                MessageBox.Show("Bạn chưa chọn lớp học ");
+                return;
+            }
+            // Loop through the selected rows and do something with each row
+            foreach (var rowHandle in selectedRows)
+            {
+                // Get the values of the selected row using the row handle
+                var id = int.Parse(gridView.GetRowCellValue(rowHandle, "id").ToString());
+
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // Nếu người dùng chọn Yes, tiến hành xóa thông tin
+                if (result == DialogResult.Yes)
+                {
+                    using (var context = new NewAppContext())
+                    {
+                        classes lophoc = context.classes.Find(id);
+
+                        if (lophoc != null)
+                        {
+                            context.classes.Remove(lophoc);
+
+                            context.SaveChanges();
+
+                            MessageBox.Show("Xóa lớp học thành công !");
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Chưa có thông tin lớp học !");
+                        }
+                        return;
+                        // Thực hiện xóa thông tin ở đây
+                    }
+
+                }
+            }
+            
+        }
     }
 }

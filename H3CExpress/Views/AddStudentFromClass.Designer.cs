@@ -46,6 +46,7 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.MaChung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.className = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,11 +75,12 @@
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Be Vietnam Pro Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(303, 498);
+            this.simpleButton1.Location = new System.Drawing.Point(291, 498);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(191, 44);
+            this.simpleButton1.Size = new System.Drawing.Size(203, 44);
             this.simpleButton1.TabIndex = 72;
             this.simpleButton1.Text = "Thêm học sinh";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // usersGridView
             // 
@@ -187,6 +189,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(191, 44);
             this.simpleButton2.TabIndex = 73;
             this.simpleButton2.Text = "Xóa học sinh";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // guna2DataGridView1
             // 
@@ -200,9 +203,10 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.guna2DataGridView1.ColumnHeadersHeight = 22;
+            this.guna2DataGridView1.ColumnHeadersHeight = 36;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaChung,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.className,
@@ -238,7 +242,7 @@
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 22;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 36;
             this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -259,6 +263,13 @@
             this.labelControl1.Size = new System.Drawing.Size(294, 30);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Thêm học sinh vào danh sách";
+            // 
+            // MaChung
+            // 
+            this.MaChung.DataPropertyName = "MaChung";
+            this.MaChung.HeaderText = "Mã chung";
+            this.MaChung.MinimumWidth = 6;
+            this.MaChung.Name = "MaChung";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -330,6 +341,7 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaChung;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn className;

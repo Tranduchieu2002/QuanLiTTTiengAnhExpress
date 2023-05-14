@@ -22,7 +22,10 @@ namespace H3CExpress.Views
             this.panelControl1.Controls.Add(updateClass);
 
             updateClass.Dock = DockStyle.Fill;
+
         }
+
+        
 
         private void purchaseCourse1_Load(object sender, EventArgs e)
         {
