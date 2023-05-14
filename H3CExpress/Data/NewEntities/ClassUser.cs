@@ -11,17 +11,26 @@ namespace H3CExpress.Data.NewEntities
     {
         [Key]
         [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ClassId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
+        public int Id { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ClassId { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int UserId { get; set; }
 
-        public double? FirstScore { get; set; }
+        public int? ListeningScore { get; set; }
 
-        public double? SecondScore { get; set; }
+        public int? ReadingScore { get; set; }
+
+        public int? SpeakingScore { get; set; }
+
+        public int? WritingScore { get; set; }
 
         [StringLength(50)]
         public string EstimateTitle { get; set; }

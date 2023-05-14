@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateClassesControl));
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -44,6 +45,7 @@
             this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -56,13 +58,13 @@
             // gridControl
             // 
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.gridControl.Location = new System.Drawing.Point(0, 153);
             this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.gridControl.MenuManager = this.ribbonControl;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(1241, 642);
+            this.gridControl.Size = new System.Drawing.Size(1418, 642);
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -90,71 +92,77 @@
             this.id.Caption = "Mã lớp học";
             this.id.DisplayFormat.FormatString = "Mã lớp học";
             this.id.FieldName = "id";
-            this.id.MinWidth = 25;
+            this.id.MinWidth = 29;
             this.id.Name = "id";
             this.id.Visible = true;
             this.id.VisibleIndex = 0;
-            this.id.Width = 87;
+            this.id.Width = 99;
             // 
             // name
             // 
             this.name.Caption = "Tên lớp";
-            this.name.MinWidth = 25;
+            this.name.FieldName = "name";
+            this.name.MinWidth = 29;
             this.name.Name = "name";
             this.name.Visible = true;
             this.name.VisibleIndex = 1;
-            this.name.Width = 87;
+            this.name.Width = 99;
             // 
             // teacherName
             // 
             this.teacherName.Caption = "Tên Giáo Viên";
-            this.teacherName.MinWidth = 25;
+            this.teacherName.FieldName = "teacherName";
+            this.teacherName.MinWidth = 29;
             this.teacherName.Name = "teacherName";
             this.teacherName.Visible = true;
             this.teacherName.VisibleIndex = 2;
-            this.teacherName.Width = 94;
+            this.teacherName.Width = 107;
             // 
             // courseName
             // 
             this.courseName.Caption = "Tên Khóa Học";
-            this.courseName.MinWidth = 25;
+            this.courseName.FieldName = "courseName";
+            this.courseName.MinWidth = 29;
             this.courseName.Name = "courseName";
             this.courseName.Visible = true;
             this.courseName.VisibleIndex = 3;
-            this.courseName.Width = 94;
+            this.courseName.Width = 107;
             // 
             // schedule
             // 
             this.schedule.Caption = "Lịch học";
-            this.schedule.MinWidth = 25;
+            this.schedule.FieldName = "schedule";
+            this.schedule.MinWidth = 29;
             this.schedule.Name = "schedule";
             this.schedule.Visible = true;
             this.schedule.VisibleIndex = 4;
-            this.schedule.Width = 94;
+            this.schedule.Width = 107;
             // 
             // startDate
             // 
             this.startDate.Caption = "Ngày bắt đầu";
             this.startDate.DisplayFormat.FormatString = "d";
             this.startDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.startDate.MinWidth = 25;
+            this.startDate.FieldName = "startDate";
+            this.startDate.MinWidth = 29;
             this.startDate.Name = "startDate";
             this.startDate.Visible = true;
             this.startDate.VisibleIndex = 5;
-            this.startDate.Width = 94;
+            this.startDate.Width = 107;
             // 
             // endDate
             // 
             this.endDate.Caption = "Ngày kết thúc";
-            this.endDate.MinWidth = 25;
+            this.endDate.FieldName = "endDate";
+            this.endDate.MinWidth = 29;
             this.endDate.Name = "endDate";
             this.endDate.Visible = true;
             this.endDate.VisibleIndex = 6;
-            this.endDate.Width = 94;
+            this.endDate.Width = 107;
             // 
             // ribbonControl
             // 
-            this.ribbonControl.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
+            this.ribbonControl.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(40, 37, 40, 37);
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
@@ -164,17 +172,18 @@
             this.bbiNew,
             this.bbiEdit,
             this.bbiDelete,
-            this.bbiRefresh});
+            this.bbiRefresh,
+            this.barButtonItem1});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonControl.MaxItemId = 20;
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.ribbonControl.MaxItemId = 21;
             this.ribbonControl.Name = "ribbonControl";
-            this.ribbonControl.OptionsMenuMinWidth = 385;
+            this.ribbonControl.OptionsMenuMinWidth = 440;
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(1241, 153);
+            this.ribbonControl.Size = new System.Drawing.Size(1418, 153);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -206,6 +215,7 @@
             this.bbiEdit.Id = 17;
             this.bbiEdit.ImageOptions.ImageUri.Uri = "Edit";
             this.bbiEdit.Name = "bbiEdit";
+            this.bbiEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiEdit_ItemClick);
             // 
             // bbiDelete
             // 
@@ -213,6 +223,7 @@
             this.bbiDelete.Id = 18;
             this.bbiDelete.ImageOptions.ImageUri.Uri = "Delete";
             this.bbiDelete.Name = "bbiDelete";
+            this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDelete_ItemClick);
             // 
             // bbiRefresh
             // 
@@ -220,6 +231,16 @@
             this.bbiRefresh.Id = 19;
             this.bbiRefresh.ImageOptions.ImageUri.Uri = "Refresh";
             this.bbiRefresh.Name = "bbiRefresh";
+            this.bbiRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiRefresh_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Hiển thị học sinh lớp học";
+            this.barButtonItem1.Id = 20;
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -238,6 +259,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiEdit);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiRefresh);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Tasks";
             // 
@@ -253,21 +275,21 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.bsiRecordsCount);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 762);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1241, 33);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1418, 33);
             // 
             // UpdateClassesControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "UpdateClassesControl";
-            this.Size = new System.Drawing.Size(1241, 795);
+            this.Size = new System.Drawing.Size(1418, 795);
             this.Load += new System.EventHandler(this.UpdateClassesControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
@@ -298,5 +320,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn schedule;
         private DevExpress.XtraGrid.Columns.GridColumn startDate;
         private DevExpress.XtraGrid.Columns.GridColumn endDate;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }

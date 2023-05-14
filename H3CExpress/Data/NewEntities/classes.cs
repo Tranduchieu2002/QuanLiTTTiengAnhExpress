@@ -7,12 +7,18 @@ namespace H3CExpress.Data.NewEntities
     using System.Data.Entity.Spatial;
     using static DevExpress.XtraEditors.Mask.MaskSettings;
 
+    public enum Status
+    {
+        ACTIVE,
+        INACTIVE
+    }
     public partial class classes
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public classes()
         {
             ClassUser = new HashSet<ClassUser>();
+            Status = Status.INACTIVE;
         }
 
         public int course_id { get; set; }
@@ -20,6 +26,8 @@ namespace H3CExpress.Data.NewEntities
         public int? schedule_id { get; set; }
 
         public int id { get; set; }
+
+        public Status Status { get; set; }
 
         public int? teacher_id { get; set; }
 

@@ -35,7 +35,7 @@ namespace H3CExpress.UserControls
                        u.gender,
                        u.username,
                        u.email,
-                       chucvu = u.roles.Code,
+                       chucvu = u.roles.name,
                    });
                 var a = teacherList.Take(10).ToList();
                 this.gridControl1.DataSource = a;
