@@ -50,6 +50,49 @@ namespace H3CExpress
                 }
             }
         }
+        public static bool HasOneRadioSelect(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is RadioButton)
+                {
+                    RadioButton radioButton = (RadioButton)c;
+                    if (radioButton.Checked) return true;
+                }
+                else if (c is Guna2RadioButton)
+                {
+                    Guna2RadioButton radioButton = (Guna2RadioButton)c;
+                    if (radioButton.Checked) return true;
+                }
+                else if (c.HasChildren)
+                {
+                    ClearLabels(c);
+                }
+            }
+            return false;
+        }
+
+        public static bool UnCheckedAllRadioButton(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is RadioButton)
+                {
+                    RadioButton radioButton = (RadioButton)c;
+                    radioButton.Checked = false;
+                }
+                else if (c is Guna2RadioButton)
+                {
+                    Guna2RadioButton radioButton = (Guna2RadioButton)c;
+                    radioButton.Checked = false;
+                }
+                else if (c.HasChildren)
+                {
+                    ClearLabels(c);
+                }
+            }
+            return false;
+        }
 
         public static string AreAllTextBoxHasValue(Control control, string notify = "")
         {

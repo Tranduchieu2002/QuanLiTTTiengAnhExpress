@@ -1,6 +1,6 @@
 ﻿namespace H3CExpress.UserControls
 {
-    partial class CourseDatagridview
+    partial class QuanLyKhoaHoc
     {
         /// <summary> 
         /// Required designer variable.

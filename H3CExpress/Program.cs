@@ -18,7 +18,8 @@ namespace H3CExpress
             //Application.Run(new Login());
             //Application.Run(new fUpadtePerson("Tea"));
             //Application.Run(new fUpdateKhoaHoc());
-            Application.Run(new QuanLyDiem());
+            //Application.Run(new QuanLyDiem());
+            Application.Run(new QuanLyBienLai());
         }
     }
 }
