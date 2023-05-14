@@ -27,7 +27,7 @@ namespace H3CExpress.Views
         void loadData(NewAppContext model)
         {
 
-            ClassInstance = model.classes.Find(currentClassesId);
+            classes ClassInstance = model.classes.Find(currentClassesId);
             if (ClassInstance == null)
             {
                 MessageBox.Show("KHông tìm thấy lớp học");
@@ -86,7 +86,7 @@ namespace H3CExpress.Views
             {
                 using (var context = new NewAppContext())
                 {
-                    if(usersGridView.SelectedRows.Count == 0)
+                    if (usersGridView.SelectedRows.Count == 0)
                     {
                         MessageBox.Show($"Bạn chưa chọn học viên.");
                         return;
@@ -117,7 +117,8 @@ namespace H3CExpress.Views
                         loadData(context);
                     }
                 }
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

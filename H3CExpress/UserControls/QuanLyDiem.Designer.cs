@@ -41,50 +41,50 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.cbLop = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.cbLop = new System.Windows.Forms.ComboBox();
             this.pQuanLyDiem = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.guna2NumericUpDown2 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.guna2NumericUpDown3 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.pInfo = new DevExpress.XtraEditors.PanelControl();
+            this.lbMalop = new DevExpress.XtraEditors.LabelControl();
+            this.lbTenHocVien = new DevExpress.XtraEditors.LabelControl();
+            this.lbTenLop = new DevExpress.XtraEditors.LabelControl();
+            this.lbMahocvien = new DevExpress.XtraEditors.LabelControl();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.guna2NumericUpDown4 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.lbMalop = new DevExpress.XtraEditors.LabelControl();
-            this.lbTenLop = new DevExpress.XtraEditors.LabelControl();
-            this.lbMahocvien = new DevExpress.XtraEditors.LabelControl();
-            this.lbTenHocVien = new DevExpress.XtraEditors.LabelControl();
-            this.pInfo = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.guna2NumericUpDown3 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.guna2NumericUpDown2 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pQuanLyDiem)).BeginInit();
             this.pQuanLyDiem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pInfo)).BeginInit();
+            this.pInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pInfo)).BeginInit();
-            this.pInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -203,36 +203,25 @@
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Lop";
             // 
-            // cbLop
-            // 
-            this.cbLop.BackColor = System.Drawing.Color.Transparent;
-            this.cbLop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLop.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbLop.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbLop.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbLop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbLop.ItemHeight = 30;
-            this.cbLop.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.cbLop.Location = new System.Drawing.Point(59, 47);
-            this.cbLop.Name = "cbLop";
-            this.cbLop.Size = new System.Drawing.Size(249, 36);
-            this.cbLop.TabIndex = 5;
-            this.cbLop.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
-            // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.cbLop);
+            this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 158);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(331, 417);
             this.panelControl1.TabIndex = 4;
+            // 
+            // cbLop
+            // 
+            this.cbLop.FormattingEnabled = true;
+            this.cbLop.Location = new System.Drawing.Point(63, 70);
+            this.cbLop.Name = "cbLop";
+            this.cbLop.Size = new System.Drawing.Size(121, 21);
+            this.cbLop.TabIndex = 2;
+            this.cbLop.SelectedIndexChanged += new System.EventHandler(this.cbLop_SelectedIndexChanged);
             // 
             // pQuanLyDiem
             // 
@@ -260,158 +249,49 @@
             this.pQuanLyDiem.Size = new System.Drawing.Size(345, 417);
             this.pQuanLyDiem.TabIndex = 7;
             // 
-            // panelControl3
+            // pInfo
             // 
-            this.panelControl3.Controls.Add(this.gridControl1);
-            this.panelControl3.Controls.Add(this.labelControl3);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(331, 158);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(434, 417);
-            this.panelControl3.TabIndex = 8;
+            this.pInfo.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pInfo.Controls.Add(this.lbMalop);
+            this.pInfo.Controls.Add(this.lbTenHocVien);
+            this.pInfo.Controls.Add(this.lbTenLop);
+            this.pInfo.Controls.Add(this.lbMahocvien);
+            this.pInfo.Location = new System.Drawing.Point(97, 16);
+            this.pInfo.Name = "pInfo";
+            this.pInfo.Size = new System.Drawing.Size(243, 166);
+            this.pInfo.TabIndex = 21;
             // 
-            // labelControl3
+            // lbMalop
             // 
-            this.labelControl3.Location = new System.Drawing.Point(7, 16);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(96, 13);
-            this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "Danh sach hoc vien";
+            this.lbMalop.Location = new System.Drawing.Point(14, 43);
+            this.lbMalop.Name = "lbMalop";
+            this.lbMalop.Size = new System.Drawing.Size(67, 13);
+            this.lbMalop.TabIndex = 17;
+            this.lbMalop.Text = "labelControl17";
             // 
-            // gridControl1
+            // lbTenHocVien
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gridControl1.Location = new System.Drawing.Point(2, 47);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.ribbonControl;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(430, 368);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.lbTenHocVien.Location = new System.Drawing.Point(14, 148);
+            this.lbTenHocVien.Name = "lbTenHocVien";
+            this.lbTenHocVien.Size = new System.Drawing.Size(67, 13);
+            this.lbTenHocVien.TabIndex = 20;
+            this.lbTenHocVien.Text = "labelControl18";
             // 
-            // gridView1
+            // lbTenLop
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.lbTenLop.Location = new System.Drawing.Point(14, 85);
+            this.lbTenLop.Name = "lbTenLop";
+            this.lbTenLop.Size = new System.Drawing.Size(67, 13);
+            this.lbTenLop.TabIndex = 18;
+            this.lbTenLop.Text = "labelControl17";
             // 
-            // labelControl4
+            // lbMahocvien
             // 
-            this.labelControl4.Location = new System.Drawing.Point(6, 16);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(68, 13);
-            this.labelControl4.TabIndex = 0;
-            this.labelControl4.Text = "Diem hoc vien";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(6, 59);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(32, 13);
-            this.labelControl5.TabIndex = 1;
-            this.labelControl5.Text = "Ma lop";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(6, 101);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(36, 13);
-            this.labelControl6.TabIndex = 2;
-            this.labelControl6.Text = "Ten lop";
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(5, 135);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(59, 13);
-            this.labelControl7.TabIndex = 3;
-            this.labelControl7.Text = "Ma hoc vien";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(6, 166);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(63, 13);
-            this.labelControl8.TabIndex = 4;
-            this.labelControl8.Text = "Ten hoc vien";
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Location = new System.Drawing.Point(7, 201);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(51, 13);
-            this.labelControl9.TabIndex = 5;
-            this.labelControl9.Text = "Diem nghe";
-            // 
-            // guna2NumericUpDown1
-            // 
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(97, 188);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(109, 26);
-            this.guna2NumericUpDown1.TabIndex = 6;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Location = new System.Drawing.Point(221, 201);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(22, 13);
-            this.labelControl10.TabIndex = 7;
-            this.labelControl10.Text = "diem";
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Location = new System.Drawing.Point(221, 246);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(22, 13);
-            this.labelControl11.TabIndex = 10;
-            this.labelControl11.Text = "diem";
-            // 
-            // guna2NumericUpDown2
-            // 
-            this.guna2NumericUpDown2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown2.Location = new System.Drawing.Point(97, 233);
-            this.guna2NumericUpDown2.Name = "guna2NumericUpDown2";
-            this.guna2NumericUpDown2.Size = new System.Drawing.Size(109, 26);
-            this.guna2NumericUpDown2.TabIndex = 9;
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Location = new System.Drawing.Point(7, 246);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(41, 13);
-            this.labelControl12.TabIndex = 8;
-            this.labelControl12.Text = "Diem noi";
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Location = new System.Drawing.Point(221, 291);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(22, 13);
-            this.labelControl13.TabIndex = 13;
-            this.labelControl13.Text = "diem";
-            // 
-            // guna2NumericUpDown3
-            // 
-            this.guna2NumericUpDown3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown3.Location = new System.Drawing.Point(97, 278);
-            this.guna2NumericUpDown3.Name = "guna2NumericUpDown3";
-            this.guna2NumericUpDown3.Size = new System.Drawing.Size(109, 26);
-            this.guna2NumericUpDown3.TabIndex = 12;
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Location = new System.Drawing.Point(7, 291);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(45, 13);
-            this.labelControl14.TabIndex = 11;
-            this.labelControl14.Text = "Diem doc";
+            this.lbMahocvien.Location = new System.Drawing.Point(14, 119);
+            this.lbMahocvien.Name = "lbMahocvien";
+            this.lbMahocvien.Size = new System.Drawing.Size(67, 13);
+            this.lbMahocvien.TabIndex = 19;
+            this.lbMahocvien.Text = "labelControl17";
             // 
             // labelControl15
             // 
@@ -439,49 +319,159 @@
             this.labelControl16.TabIndex = 14;
             this.labelControl16.Text = "Diem viet";
             // 
-            // lbMalop
+            // labelControl13
             // 
-            this.lbMalop.Location = new System.Drawing.Point(14, 43);
-            this.lbMalop.Name = "lbMalop";
-            this.lbMalop.Size = new System.Drawing.Size(67, 13);
-            this.lbMalop.TabIndex = 17;
-            this.lbMalop.Text = "labelControl17";
+            this.labelControl13.Location = new System.Drawing.Point(221, 291);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(22, 13);
+            this.labelControl13.TabIndex = 13;
+            this.labelControl13.Text = "diem";
             // 
-            // lbTenLop
+            // guna2NumericUpDown3
             // 
-            this.lbTenLop.Location = new System.Drawing.Point(14, 85);
-            this.lbTenLop.Name = "lbTenLop";
-            this.lbTenLop.Size = new System.Drawing.Size(67, 13);
-            this.lbTenLop.TabIndex = 18;
-            this.lbTenLop.Text = "labelControl17";
+            this.guna2NumericUpDown3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown3.Location = new System.Drawing.Point(97, 278);
+            this.guna2NumericUpDown3.Name = "guna2NumericUpDown3";
+            this.guna2NumericUpDown3.Size = new System.Drawing.Size(109, 26);
+            this.guna2NumericUpDown3.TabIndex = 12;
             // 
-            // lbMahocvien
+            // labelControl14
             // 
-            this.lbMahocvien.Location = new System.Drawing.Point(14, 119);
-            this.lbMahocvien.Name = "lbMahocvien";
-            this.lbMahocvien.Size = new System.Drawing.Size(67, 13);
-            this.lbMahocvien.TabIndex = 19;
-            this.lbMahocvien.Text = "labelControl17";
+            this.labelControl14.Location = new System.Drawing.Point(7, 291);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(45, 13);
+            this.labelControl14.TabIndex = 11;
+            this.labelControl14.Text = "Diem doc";
             // 
-            // lbTenHocVien
+            // labelControl11
             // 
-            this.lbTenHocVien.Location = new System.Drawing.Point(14, 148);
-            this.lbTenHocVien.Name = "lbTenHocVien";
-            this.lbTenHocVien.Size = new System.Drawing.Size(67, 13);
-            this.lbTenHocVien.TabIndex = 20;
-            this.lbTenHocVien.Text = "labelControl18";
+            this.labelControl11.Location = new System.Drawing.Point(221, 246);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(22, 13);
+            this.labelControl11.TabIndex = 10;
+            this.labelControl11.Text = "diem";
             // 
-            // pInfo
+            // guna2NumericUpDown2
             // 
-            this.pInfo.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pInfo.Controls.Add(this.lbMalop);
-            this.pInfo.Controls.Add(this.lbTenHocVien);
-            this.pInfo.Controls.Add(this.lbTenLop);
-            this.pInfo.Controls.Add(this.lbMahocvien);
-            this.pInfo.Location = new System.Drawing.Point(97, 16);
-            this.pInfo.Name = "pInfo";
-            this.pInfo.Size = new System.Drawing.Size(243, 166);
-            this.pInfo.TabIndex = 21;
+            this.guna2NumericUpDown2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown2.Location = new System.Drawing.Point(97, 233);
+            this.guna2NumericUpDown2.Name = "guna2NumericUpDown2";
+            this.guna2NumericUpDown2.Size = new System.Drawing.Size(109, 26);
+            this.guna2NumericUpDown2.TabIndex = 9;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(7, 246);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(41, 13);
+            this.labelControl12.TabIndex = 8;
+            this.labelControl12.Text = "Diem noi";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(221, 201);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(22, 13);
+            this.labelControl10.TabIndex = 7;
+            this.labelControl10.Text = "diem";
+            // 
+            // guna2NumericUpDown1
+            // 
+            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(97, 188);
+            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(109, 26);
+            this.guna2NumericUpDown1.TabIndex = 6;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(7, 201);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(51, 13);
+            this.labelControl9.TabIndex = 5;
+            this.labelControl9.Text = "Diem nghe";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(6, 166);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(63, 13);
+            this.labelControl8.TabIndex = 4;
+            this.labelControl8.Text = "Ten hoc vien";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(5, 135);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(59, 13);
+            this.labelControl7.TabIndex = 3;
+            this.labelControl7.Text = "Ma hoc vien";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(6, 101);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(36, 13);
+            this.labelControl6.TabIndex = 2;
+            this.labelControl6.Text = "Ten lop";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(6, 59);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(32, 13);
+            this.labelControl5.TabIndex = 1;
+            this.labelControl5.Text = "Ma lop";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(6, 16);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(68, 13);
+            this.labelControl4.TabIndex = 0;
+            this.labelControl4.Text = "Diem hoc vien";
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Controls.Add(this.gridControl1);
+            this.panelControl3.Controls.Add(this.labelControl3);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl3.Location = new System.Drawing.Point(331, 158);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(434, 417);
+            this.panelControl3.TabIndex = 8;
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gridControl1.Location = new System.Drawing.Point(2, 47);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.MenuManager = this.ribbonControl;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(430, 368);
+            this.gridControl1.TabIndex = 1;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(7, 16);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(96, 13);
+            this.labelControl3.TabIndex = 0;
+            this.labelControl3.Text = "Danh sach hoc vien";
             // 
             // QuanLyDiem
             // 
@@ -504,18 +494,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pQuanLyDiem)).EndInit();
             this.pQuanLyDiem.ResumeLayout(false);
             this.pQuanLyDiem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pInfo)).EndInit();
+            this.pInfo.ResumeLayout(false);
+            this.pInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pInfo)).EndInit();
-            this.pInfo.ResumeLayout(false);
-            this.pInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -535,12 +525,9 @@
         private DevExpress.XtraBars.BarButtonItem bbiRefresh;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private Guna.UI2.WinForms.Guna2ComboBox cbLop;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl pQuanLyDiem;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown4;
@@ -564,5 +551,8 @@
         private DevExpress.XtraEditors.LabelControl lbTenLop;
         private DevExpress.XtraEditors.LabelControl lbMalop;
         private DevExpress.XtraEditors.PanelControl pInfo;
+        private System.Windows.Forms.ComboBox cbLop;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }
