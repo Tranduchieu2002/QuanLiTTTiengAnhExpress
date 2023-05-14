@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace H3CExpress.UserControls
 {
-    public partial class CourseDatagridview : DevExpress.XtraEditors.XtraUserControl
+    public partial class QuanLyKhoaHoc : DevExpress.XtraEditors.XtraUserControl
     {
-        public CourseDatagridview()
+        public QuanLyKhoaHoc()
         {
             InitializeComponent();
         }

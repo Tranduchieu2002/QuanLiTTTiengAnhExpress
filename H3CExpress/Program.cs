@@ -1,4 +1,5 @@
-﻿using H3CExpress.Views;
+﻿using H3CExpress.UserControls;
+using H3CExpress.Views;
 using System;
 using System.Windows.Forms;
 
@@ -14,9 +15,11 @@ namespace H3CExpress
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            //Application.Run(new Login());
             //Application.Run(new fUpadtePerson("Tea"));
             //Application.Run(new fUpdateKhoaHoc());
+            //Application.Run(new QuanLyDiem());
+            Application.Run(new QuanLyBienLai());
         }
     }
 }

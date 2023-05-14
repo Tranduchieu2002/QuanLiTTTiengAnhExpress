@@ -43,7 +43,7 @@ namespace H3CExpress.UserControls
             using (var context = new NewAppContext())
             {
                 this.gridControl1.DataSource = null;
-                var teacherList = context.users.Where(u => u.roles.Code == "USR").Select(u =>
+                var userList = context.users.Where(u => u.roles.Code == "USR").Select(u =>
                    new
                    {
                        u.id,
@@ -53,7 +53,7 @@ namespace H3CExpress.UserControls
                        u.email,
                        chucvu = u.roles.name,
                    });
-                var a = teacherList.Take(10).ToList();
+                var a = userList.Take(10).ToList();
                 this.gridControl1.DataSource = a;
             }
         }

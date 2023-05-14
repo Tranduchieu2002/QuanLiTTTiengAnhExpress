@@ -149,13 +149,19 @@
     <Compile Include="UserControls\CapNhatGiangVien.Designer.cs">
       <DependentUpon>CapNhatGiangVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\CourseDatagridview.cs">
+    <Compile Include="UserControls\QuanLyKhoaHoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\CourseDatagridview.Designer.cs">
-      <DependentUpon>CourseDatagridview.cs</DependentUpon>
+    <Compile Include="UserControls\QuanLyKhoaHoc.Designer.cs">
+      <DependentUpon>QuanLyKhoaHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\PersistentClass1.cs" />
+    <Compile Include="UserControls\QuanLyDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\QuanLyDiem.Designer.cs">
+      <DependentUpon>QuanLyDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UpdateClassesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +179,12 @@
     </Compile>
     <Compile Include="UserControls\CapNhatNhanVien.Designer.cs">
       <DependentUpon>CapNhatNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\QuanLyBienLai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\QuanLyBienLai.Designer.cs">
+      <DependentUpon>QuanLyBienLai.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils.cs" />
     <Compile Include="Validation.cs" />
@@ -238,11 +250,17 @@
     <EmbeddedResource Include="UserControls\CapNhatNhanVien.resx">
       <DependentUpon>CapNhatNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\CourseDatagridview.resx">
-      <DependentUpon>CourseDatagridview.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\QuanLyKhoaHoc.resx">
+      <DependentUpon>QuanLyKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\QuanLyDiem.resx">
+      <DependentUpon>QuanLyDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UpdateClassesControl.resx">
       <DependentUpon>UpdateClassesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\QuanLyBienLai.resx">
+      <DependentUpon>QuanLyBienLai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AddStudentFromClass.resx">
       <DependentUpon>AddStudentFromClass.cs</DependentUpon>

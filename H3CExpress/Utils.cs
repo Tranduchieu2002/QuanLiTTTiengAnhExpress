@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using DevExpress.XtraEditors;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,13 +21,77 @@ namespace H3CExpress
                 if (c is TextBoxBase)
                 {
                     TextBoxBase textBox = (TextBoxBase)c;
-                    textBox.Clear();
+                    textBox.Text = "";
+                    //textBox.Clear();
                 }
                 else if (c.HasChildren)
                 {
                     ClearTextBoxes(c);
                 }
             }
+        }
+        public static void ClearLabels(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is Label)
+                {
+                    Label label = (Label)c;
+                    label.Text = string.Empty;
+                }
+                else if (c is LabelControl)
+                {
+                    LabelControl labelControl = (LabelControl)c;
+                    labelControl.Text = string.Empty;
+                }
+                else if (c.HasChildren)
+                {
+                    ClearLabels(c);
+                }
+            }
+        }
+        public static bool HasOneRadioSelect(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is RadioButton)
+                {
+                    RadioButton radioButton = (RadioButton)c;
+                    if (radioButton.Checked) return true;
+                }
+                else if (c is Guna2RadioButton)
+                {
+                    Guna2RadioButton radioButton = (Guna2RadioButton)c;
+                    if (radioButton.Checked) return true;
+                }
+                else if (c.HasChildren)
+                {
+                    ClearLabels(c);
+                }
+            }
+            return false;
+        }
+
+        public static bool UnCheckedAllRadioButton(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is RadioButton)
+                {
+                    RadioButton radioButton = (RadioButton)c;
+                    radioButton.Checked = false;
+                }
+                else if (c is Guna2RadioButton)
+                {
+                    Guna2RadioButton radioButton = (Guna2RadioButton)c;
+                    radioButton.Checked = false;
+                }
+                else if (c.HasChildren)
+                {
+                    ClearLabels(c);
+                }
+            }
+            return false;
         }
 
         public static string AreAllTextBoxHasValue(Control control, string notify = "")
@@ -51,11 +116,11 @@ namespace H3CExpress
         {
             foreach (Control c in control.Controls)
             {
-                if (c is ComboBox || c is Guna2ComboBox)
+                if (c is System.Windows.Forms.ComboBox || c is Guna2ComboBox)
                 {
-                    if (c is ComboBox)
+                    if (c is System.Windows.Forms.ComboBox)
                     {
-                        ComboBox comboBox = (ComboBox)c;
+                        System.Windows.Forms.ComboBox comboBox = (System.Windows.Forms.ComboBox)c;
                         if (comboBox.SelectedIndex >= 0) continue;
                         return notify.Equals("") ? "Vui lòng nhập đầy đủ thông tin!!!" : notify;
 
@@ -83,11 +148,11 @@ namespace H3CExpress
         }
         public static DialogResult ShowMessError(string notify, string caption = "Có lỗi xảy ra")
         {
-            return MessageBox.Show(notify, caption, MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            return MessageBox.Show(notify, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         public static DialogResult ShowMessWarn(string notify, string caption = "Thông báo")
         {
-            return MessageBox.Show(notify, caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return MessageBox.Show(notify, caption, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
         }
     }
 }
