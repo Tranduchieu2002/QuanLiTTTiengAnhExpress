@@ -50,17 +50,19 @@
             this.panelControl1.Controls.Add(this.guna2HtmlLabel9);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(781, 38);
+            this.panelControl1.Size = new System.Drawing.Size(1041, 47);
             this.panelControl1.TabIndex = 16;
             // 
             // guna2HtmlLabel9
             // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Aqua;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(296, 5);
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Be Vietnam Pro Medium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(385, -2);
+            this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(189, 28);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(316, 43);
             this.guna2HtmlLabel9.TabIndex = 0;
             this.guna2HtmlLabel9.Text = "CẬP NHẬT KHÓA HỌC";
             // 
@@ -75,9 +77,10 @@
             this.btnSua.FillColor2 = System.Drawing.Color.DarkSeaGreen;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(428, 438);
+            this.btnSua.Location = new System.Drawing.Point(567, 497);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(146, 40);
+            this.btnSua.Size = new System.Drawing.Size(195, 49);
             this.btnSua.TabIndex = 26;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -93,9 +96,10 @@
             this.btnThem.FillColor2 = System.Drawing.Color.Teal;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(194, 438);
+            this.btnThem.Location = new System.Drawing.Point(259, 497);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(146, 40);
+            this.btnThem.Size = new System.Drawing.Size(195, 49);
             this.btnThem.TabIndex = 25;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -105,27 +109,30 @@
             this.nbGiaTien.BackColor = System.Drawing.Color.Transparent;
             this.nbGiaTien.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nbGiaTien.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nbGiaTien.Location = new System.Drawing.Point(194, 203);
+            this.nbGiaTien.Location = new System.Drawing.Point(259, 250);
+            this.nbGiaTien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nbGiaTien.Name = "nbGiaTien";
-            this.nbGiaTien.Size = new System.Drawing.Size(411, 38);
+            this.nbGiaTien.Size = new System.Drawing.Size(548, 47);
             this.nbGiaTien.TabIndex = 24;
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(72, 214);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(96, 263);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(46, 17);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(54, 21);
             this.guna2HtmlLabel4.TabIndex = 23;
             this.guna2HtmlLabel4.Text = "Giá tiền";
             // 
             // rtbMotaKhoaHoc
             // 
             this.rtbMotaKhoaHoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtbMotaKhoaHoc.Location = new System.Drawing.Point(194, 284);
+            this.rtbMotaKhoaHoc.Location = new System.Drawing.Point(259, 350);
+            this.rtbMotaKhoaHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtbMotaKhoaHoc.Name = "rtbMotaKhoaHoc";
-            this.rtbMotaKhoaHoc.Size = new System.Drawing.Size(411, 101);
+            this.rtbMotaKhoaHoc.Size = new System.Drawing.Size(547, 98);
             this.rtbMotaKhoaHoc.TabIndex = 22;
             this.rtbMotaKhoaHoc.Text = "";
             // 
@@ -133,9 +140,10 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(72, 133);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(96, 164);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(75, 17);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(89, 21);
             this.guna2HtmlLabel3.TabIndex = 21;
             this.guna2HtmlLabel3.Text = "Tên khóa học";
             // 
@@ -150,21 +158,23 @@
             this.tbNameKhoaHoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNameKhoaHoc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbNameKhoaHoc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNameKhoaHoc.Location = new System.Drawing.Point(194, 122);
+            this.tbNameKhoaHoc.Location = new System.Drawing.Point(259, 150);
+            this.tbNameKhoaHoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbNameKhoaHoc.Name = "tbNameKhoaHoc";
             this.tbNameKhoaHoc.PasswordChar = '\0';
-            this.tbNameKhoaHoc.PlaceholderText = "";
+            this.tbNameKhoaHoc.PlaceholderText = "Nhập tên khóa học";
             this.tbNameKhoaHoc.SelectedText = "";
-            this.tbNameKhoaHoc.Size = new System.Drawing.Size(411, 38);
+            this.tbNameKhoaHoc.Size = new System.Drawing.Size(548, 47);
             this.tbNameKhoaHoc.TabIndex = 20;
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(72, 327);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(96, 402);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(88, 17);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(103, 21);
             this.guna2HtmlLabel2.TabIndex = 19;
             this.guna2HtmlLabel2.Text = "Mô tả khóa học";
             // 
@@ -172,9 +182,10 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(72, 52);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(96, 64);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(74, 17);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(86, 21);
             this.guna2HtmlLabel1.TabIndex = 18;
             this.guna2HtmlLabel1.Text = "Mã khóa học";
             // 
@@ -189,19 +200,20 @@
             this.tbMaKhoaHoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbMaKhoaHoc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbMaKhoaHoc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbMaKhoaHoc.Location = new System.Drawing.Point(194, 41);
+            this.tbMaKhoaHoc.Location = new System.Drawing.Point(259, 50);
+            this.tbMaKhoaHoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbMaKhoaHoc.Name = "tbMaKhoaHoc";
             this.tbMaKhoaHoc.PasswordChar = '\0';
-            this.tbMaKhoaHoc.PlaceholderText = "";
+            this.tbMaKhoaHoc.PlaceholderText = "Nhập Mã Khóa học";
             this.tbMaKhoaHoc.SelectedText = "";
-            this.tbMaKhoaHoc.Size = new System.Drawing.Size(411, 38);
+            this.tbMaKhoaHoc.Size = new System.Drawing.Size(548, 47);
             this.tbMaKhoaHoc.TabIndex = 17;
             // 
             // fUpdateKhoaHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 503);
+            this.ClientSize = new System.Drawing.Size(1041, 619);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
@@ -213,6 +225,7 @@
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.tbMaKhoaHoc);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "fUpdateKhoaHoc";
             this.Text = " ";
             this.Load += new System.EventHandler(this.fUpdateKhoaHoc_Load);

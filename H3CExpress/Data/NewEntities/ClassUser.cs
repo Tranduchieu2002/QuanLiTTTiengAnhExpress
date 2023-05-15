@@ -24,13 +24,13 @@ namespace H3CExpress.Data.NewEntities
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int UserId { get; set; }
 
-        public int? ListeningScore { get; set; }
+        public float? ListeningScore { get; set; }
 
-        public int? ReadingScore { get; set; }
+        public float? ReadingScore { get; set; }
 
-        public int? SpeakingScore { get; set; }
+        public float? SpeakingScore { get; set; }
 
-        public int? WritingScore { get; set; }
+        public float? WritingScore { get; set; }
 
         [StringLength(50)]
         public string EstimateTitle { get; set; }

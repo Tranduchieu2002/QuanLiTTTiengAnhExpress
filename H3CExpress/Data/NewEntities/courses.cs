@@ -20,7 +20,7 @@ namespace H3CExpress.Data.NewEntities
         [StringLength(90)]
         public string description { get; set; }
 
-        public decimal? totalAmount { get; set; }
+        public decimal totalAmount { get; set; }
 
         [Required]
         [StringLength(50)]
