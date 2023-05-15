@@ -11,7 +11,6 @@ namespace H3CExpress.UserControls
 {
     public partial class CapNhatGiangVien : DevExpress.XtraEditors.XtraUserControl
     {
-        int idxRowSelect = -1;
         public CapNhatGiangVien()
         {
             InitializeComponent();
@@ -26,19 +25,27 @@ namespace H3CExpress.UserControls
         {
             using (var context = new NewAppContext())
             {
-                this.gridControl1.DataSource = null;
-                var teacherList = context.users.Where(u => u.roles.Code == "Tea").Select(u =>
-                   new
-                   {
-                       u.id,
-                       u.name,
-                       u.gender,
-                       u.username,
-                       u.email,
-                       chucvu = u.roles.name,
-                   });
-                var a = teacherList.Take(10).ToList();
-                this.gridControl1.DataSource = a;
+                try
+                {
+                    this.gridControl1.DataSource = null;
+                    var teacherList = context.users.Where(u => u.roles.Code == "Tea").Select(u =>
+                       new
+                       {
+                           u.id,
+                           u.name,
+                           u.gender,
+                           u.username,
+                           u.email,
+                           chucvu = u.roles.name,
+                       });
+                    var a = teacherList.Take(10).ToList();
+                    this.gridControl1.DataSource = a;
+                }
+                catch
+                {
+                    Utils.ShowMessError("Có lỗi xảy ra khi lấy dữ liệu!!!");
+
+                }
             }
 
         }
@@ -85,11 +92,7 @@ namespace H3CExpress.UserControls
             loadData();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-            this.idxRowSelect = e.RowIndex;
-        }
+
 
         private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
         {

@@ -1,8 +1,8 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using H3CExpress.Data.NewEntities;
-using H3CExpress.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,23 +10,18 @@ using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static H3CExpress.Data.NewEntities.users;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace H3CExpress.UserControls
+namespace H3CExpress.FormSchema
 {
-    public partial class QuanLyDiem : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class QuanLyDiem : DevExpress.XtraEditors.XtraUserControl
     {
-
         public QuanLyDiem()
         {
             InitializeComponent();
         }
-
         void loadData(string id)
         {
             using (var context = new NewAppContext())
@@ -35,7 +30,6 @@ namespace H3CExpress.UserControls
                 if (ClassInstance == null)
                 {
                     MessageBox.Show("KHông tìm thấy lớp học");
-                    this.Close();
                 }
                 this.gridControl1.DataSource = null;
                 var listStudent = ClassInstance.ClassUser.Select(u => new
@@ -52,23 +46,7 @@ namespace H3CExpress.UserControls
             }
         }
 
-        private void QuanLyDiem_Load(object sender, EventArgs e)
-        {
-            cbLop.DataSource = null;
-            cbLop.DisplayMember = "name";
-            cbLop.ValueMember = "id";
-            using (var context = new NewAppContext())
-            {
-                var data = context.classes.Select(c => new
-                {
-                    name = c.name,
-                    id = c.id
-                }).ToList();
-                cbLop.DataSource = data;
-                cbLop.SelectedIndex = 0;
-            }
-            Utils.ClearLabels(pInfo);
-        }
+
         public void updateInfoLop()
         {
             if (cbLop.SelectedIndex == -1) return;
@@ -103,5 +81,25 @@ namespace H3CExpress.UserControls
                 lbTenHocVien.Text = gridView.GetRowCellValue(rowHandle, "studentName").ToString();
             }
         }
+
+        private void XtraUserControl1_Load(object sender, EventArgs e)
+        {
+            cbLop.DataSource = null;
+            cbLop.DisplayMember = "name";
+            cbLop.ValueMember = "id";
+            using (var context = new NewAppContext())
+            {
+                var data = context.classes.Select(c => new
+                {
+                    name = c.name,
+                    id = c.id
+                }).ToList();
+                cbLop.DataSource = data;
+                cbLop.SelectedIndex = 0;
+            }
+            Utils.ClearLabels(pInfo);
+        }
+
+
     }
 }
