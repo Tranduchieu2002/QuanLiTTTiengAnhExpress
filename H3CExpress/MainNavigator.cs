@@ -11,6 +11,7 @@ namespace H3CExpress
         CapNhatGiangVien updateGiangVien;
         CapNhatNguoiDung updateNguoiDung;
         CapNhatNhanVien updateNhanVien;
+        DanhGiaHocSinh danhGiaHocSinh;
 
         public MainNavigator()
         {
@@ -66,6 +67,23 @@ namespace H3CExpress
                 LoadToPanel(updateNhanVien);
             }
             else updateNhanVien.BringToFront();
+        }
+
+        private void accordionControlElement2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement1_Click(object sender, EventArgs e)
+        {
+
+            if (danhGiaHocSinh == null)
+            {
+                danhGiaHocSinh = new DanhGiaHocSinh();
+                LoadToPanel(danhGiaHocSinh);
+            }
+            else danhGiaHocSinh.BringToFront();
+
         }
     }
 }

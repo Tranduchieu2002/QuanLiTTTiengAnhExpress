@@ -38,12 +38,13 @@
             this.updateStudents = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.updateEmps = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ScoreControl = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ReportControls = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.classReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.studentReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -52,9 +53,10 @@
             // mainContainer
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContainer.Location = new System.Drawing.Point(304, 31);
+            this.mainContainer.Location = new System.Drawing.Point(405, 39);
+            this.mainContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mainContainer.Name = "mainContainer";
-            this.mainContainer.Size = new System.Drawing.Size(645, 466);
+            this.mainContainer.Size = new System.Drawing.Size(860, 573);
             this.mainContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -72,10 +74,11 @@
             this.qldmControl,
             this.ScoreControl,
             this.ReportControls});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 31);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 39);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(304, 466);
+            this.accordionControl1.Size = new System.Drawing.Size(405, 573);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -130,16 +133,11 @@
             // ScoreControl
             // 
             this.ScoreControl.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement2,
             this.accordionControlElement1});
             this.ScoreControl.Expanded = true;
             this.ScoreControl.Name = "ScoreControl";
             this.ScoreControl.Text = "Quản lí điểm";
-            // 
-            // accordionControlElement1
-            // 
-            this.accordionControlElement1.Expanded = true;
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Text = "Element1";
             // 
             // ReportControls
             // 
@@ -166,9 +164,9 @@
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(949, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1265, 39);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -176,13 +174,29 @@
             // 
             this.fluentFormDefaultManager1.Form = this;
             // 
+            // accordionControlElement2
+            // 
+            this.accordionControlElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
+            this.accordionControlElement2.Name = "accordionControlElement2";
+            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement2.Text = "Quản lí điểm";
+            this.accordionControlElement2.Click += new System.EventHandler(this.accordionControlElement2_Click);
+            // 
+            // accordionControlElement1
+            // 
+            this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement1.Text = "Đánh gia học sinh";
+            this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
+            // 
             // MainNavigator
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 497);
+            this.ClientSize = new System.Drawing.Size(1265, 612);
             this.ControlContainer = this.mainContainer;
             this.Controls.Add(this.mainContainer);
             this.Controls.Add(this.accordionControl1);
@@ -191,7 +205,7 @@
             this.IconOptions.Image = global::H3CExpress.Properties.Resources.logo;
             this.IconOptions.SvgImage = global::H3CExpress.Properties.Resources.Goescat_Macaron_Spotify_client;
             this.IconOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.Full;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "MainNavigator";
             this.NavigationControl = this.accordionControl1;
             this.Text = "H3C-English";
@@ -218,6 +232,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement ReportControls;
         private DevExpress.XtraBars.Navigation.AccordionControlElement classReport;
         private DevExpress.XtraBars.Navigation.AccordionControlElement studentReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
     }
 }

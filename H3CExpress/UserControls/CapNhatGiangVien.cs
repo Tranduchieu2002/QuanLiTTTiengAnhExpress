@@ -105,5 +105,10 @@ namespace H3CExpress.UserControls
                 loadData();
             }
         }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Auth.ExportToExcel(gridControl1);
+        }
     }
 }

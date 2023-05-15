@@ -1,7 +1,9 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
 using H3CExpress.Data.NewEntities;
+using H3CExpress.Reports;
 using H3CExpress.Views;
 using System;
 using System.Collections.Generic;
@@ -51,7 +53,6 @@ namespace H3CExpress.UserControls
                        u.gender,
                        u.username,
                        u.email,
-                       chucvu = u.roles.name,
                    });
                 var a = userList.Take(10).ToList();
                 this.gridControl1.DataSource = a;
@@ -104,6 +105,13 @@ namespace H3CExpress.UserControls
         private void bbiRefresh_ItemClick(object sender, ItemClickEventArgs e)
         {
             loadData();
+        }
+
+        private void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            usersReport usersReport = new usersReport();
+            usersReport.ShowPreview();
+
         }
     }
 }
