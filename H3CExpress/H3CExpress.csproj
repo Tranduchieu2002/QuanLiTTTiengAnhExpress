@@ -141,6 +141,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSchema\CapNhatDiemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormSchema\CapNhatDiemControl.Designer.cs">
+      <DependentUpon>CapNhatDiemControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSchema\PurchaseCourse.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -271,6 +277,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSchema\CapNhatDiemControl.resx">
+      <DependentUpon>CapNhatDiemControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSchema\PurchaseCourse.resx">
       <DependentUpon>PurchaseCourse.cs</DependentUpon>

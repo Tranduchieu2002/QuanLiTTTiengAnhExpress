@@ -1,32 +1,32 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraLayout;
+using DevExpress.XtraLayout.Helpers;
 using H3CExpress.Data.NewEntities;
-using H3CExpress.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static H3CExpress.Data.NewEntities.users;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace H3CExpress.UserControls
+namespace H3CExpress.FormSchema
 {
-    public partial class QuanLyDiem : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class CapNhatDiemControl : DevExpress.XtraEditors.XtraUserControl
     {
-
-        public QuanLyDiem()
+        public CapNhatDiemControl()
         {
             InitializeComponent();
-        }
+            cbLop.DisplayMember = "name";
+            cbLop.ValueMember = "id";
 
+        }
         void loadData(string id)
         {
             using (var context = new NewAppContext())
@@ -35,11 +35,12 @@ namespace H3CExpress.UserControls
                 if (ClassInstance == null)
                 {
                     MessageBox.Show("KHông tìm thấy lớp học");
-                    this.Close();
+                    return;
                 }
                 this.gridControl1.DataSource = null;
                 var listStudent = ClassInstance.ClassUser.Select(u => new
                 {
+                    classId = u.ClassId,
                     MaChung = u.Id,
                     studentId = u.UserId,
                     studentName = u.users.name,
@@ -55,8 +56,7 @@ namespace H3CExpress.UserControls
         private void QuanLyDiem_Load(object sender, EventArgs e)
         {
             cbLop.DataSource = null;
-            cbLop.DisplayMember = "name";
-            cbLop.ValueMember = "id";
+            
             using (var context = new NewAppContext())
             {
                 var data = context.classes.Select(c => new
@@ -92,7 +92,6 @@ namespace H3CExpress.UserControls
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            updateInfoLop();
             GridView gridView = gridControl1.MainView as GridView;
             var selectRows = gridView.GetSelectedRows();
             lbMahocvien.Text = "";
@@ -101,6 +100,24 @@ namespace H3CExpress.UserControls
             {
                 lbMahocvien.Text = gridView.GetRowCellValue(rowHandle, "studentId").ToString();
                 lbTenHocVien.Text = gridView.GetRowCellValue(rowHandle, "studentName").ToString();
+
+                // Lấy điểm của học viên và hiển thị lên các input tương ứng
+                int studentId = int.Parse(gridView.GetRowCellValue(rowHandle, "studentId").ToString());
+                int classId = int.Parse(gridView.GetRowCellValue(rowHandle, "classId").ToString());
+                string className = gridView.GetRowCellValue(rowHandle, "className").ToString();
+                lbMalop.Text = classId.ToString();
+                lbTenLop.Text = className;
+                using (var context = new NewAppContext())
+                {
+                    var classUser = context.ClassUser.FirstOrDefault(cu => cu.ClassId == (classId) && cu.UserId == studentId);
+                    if (classUser != null)
+                    {
+                        listening.Value = Convert.ToDecimal(classUser.ListeningScore ?? 0);
+                        reading.Value = Convert.ToDecimal(classUser.ReadingScore ?? 0);
+                        speaking.Value = Convert.ToDecimal(classUser.SpeakingScore ?? 0);
+                        writing.Value = Convert.ToDecimal(classUser.WritingScore ?? 0);
+                    }
+                }
             }
         }
 
@@ -117,10 +134,10 @@ namespace H3CExpress.UserControls
                 return;
             }
 
-            decimal speakingV = (speaking.Value);
-            decimal listeningV = (listening.Value);
-            decimal readingV = (reading.Value);
-            decimal writingV = (writing.Value);
+            float speakingV = (float)(speaking.Value);
+            float listeningV = (float)(listening.Value);
+            float readingV = (float)(reading.Value);
+            float writingV = (float)(writing.Value);
 
             int classId = int.Parse(maLop);
             int userId = int.Parse(maHocVien);
@@ -133,10 +150,10 @@ namespace H3CExpress.UserControls
                 if (classUser != null)
                 {
                     // Cập nhật điểm và trạng thái
-                    classUser.SpeakingScore = (float)speakingV;
-                    classUser.ListeningScore = (float)listeningV;
-                    classUser.ReadingScore = (float)readingV;
-                    classUser.WritingScore = (float)writingV;
+                    classUser.SpeakingScore = speakingV;
+                    classUser.ListeningScore = listeningV;
+                    classUser.ReadingScore = readingV;
+                    classUser.WritingScore = writingV;
 
                     // Lưu thay đổi vào cơ sở dữ liệu
                     context.SaveChanges();
@@ -153,5 +170,10 @@ namespace H3CExpress.UserControls
             }
         }
 
+        private void gridView1_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+
+        }
     }
+
 }

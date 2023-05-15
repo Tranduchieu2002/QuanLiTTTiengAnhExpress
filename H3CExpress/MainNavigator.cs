@@ -1,4 +1,5 @@
-﻿using H3CExpress.UserControls;
+﻿using H3CExpress.FormSchema;
+using H3CExpress.UserControls;
 using System;
 using System.Windows.Forms;
 
@@ -14,6 +15,7 @@ namespace H3CExpress
         DanhGiaHocSinh danhGiaHocSinh;
         QuanLyHoaDon quanLyHoaDon;
         QuanLyKhoaHoc quanLyKhoaHoc;
+        CapNhatDiemControl CapNhatDiemControl;
         public MainNavigator()
         {
             InitializeComponent();
@@ -72,7 +74,12 @@ namespace H3CExpress
 
         private void accordionControlElement2_Click(object sender, EventArgs e)
         {
-
+            if (CapNhatDiemControl == null)
+            {
+                CapNhatDiemControl = new CapNhatDiemControl();
+                LoadToPanel(CapNhatDiemControl);
+            }
+            else CapNhatDiemControl.BringToFront();
         }
 
         private void accordionControlElement1_Click(object sender, EventArgs e)
