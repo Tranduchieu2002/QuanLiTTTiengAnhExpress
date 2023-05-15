@@ -64,6 +64,12 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
+            this.SoHoaDon = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MaHocVien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MaKhoaHoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenKhoaHoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgayLap = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ThanhTien = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).BeginInit();
@@ -157,6 +163,7 @@
             this.guna2GradientButton4.Size = new System.Drawing.Size(110, 33);
             this.guna2GradientButton4.TabIndex = 5;
             this.guna2GradientButton4.Text = "In biên lai";
+            this.guna2GradientButton4.Click += new System.EventHandler(this.guna2GradientButton4_Click);
             // 
             // guna2GradientButton3
             // 
@@ -296,6 +303,13 @@
             // 
             // gridView2
             // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.SoHoaDon,
+            this.MaHocVien,
+            this.MaKhoaHoc,
+            this.TenKhoaHoc,
+            this.NgayLap,
+            this.ThanhTien});
             this.gridView2.DetailHeight = 431;
             this.gridView2.GridControl = this.hoaDonList;
             this.gridView2.Name = "gridView2";
@@ -546,6 +560,66 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tạo hóa đơn mua khóa học";
             // 
+            // SoHoaDon
+            // 
+            this.SoHoaDon.Caption = "Số Hóa Đơn";
+            this.SoHoaDon.FieldName = "SoHoaDon";
+            this.SoHoaDon.MinWidth = 25;
+            this.SoHoaDon.Name = "SoHoaDon";
+            this.SoHoaDon.Visible = true;
+            this.SoHoaDon.VisibleIndex = 0;
+            this.SoHoaDon.Width = 94;
+            // 
+            // MaHocVien
+            // 
+            this.MaHocVien.Caption = "Mã học viên";
+            this.MaHocVien.FieldName = "MaHocVien";
+            this.MaHocVien.MinWidth = 25;
+            this.MaHocVien.Name = "MaHocVien";
+            this.MaHocVien.Visible = true;
+            this.MaHocVien.VisibleIndex = 1;
+            this.MaHocVien.Width = 94;
+            // 
+            // MaKhoaHoc
+            // 
+            this.MaKhoaHoc.Caption = "Ma Khóa Học";
+            this.MaKhoaHoc.FieldName = "MaKhoaHoc";
+            this.MaKhoaHoc.MinWidth = 25;
+            this.MaKhoaHoc.Name = "MaKhoaHoc";
+            this.MaKhoaHoc.Visible = true;
+            this.MaKhoaHoc.VisibleIndex = 2;
+            this.MaKhoaHoc.Width = 94;
+            // 
+            // TenKhoaHoc
+            // 
+            this.TenKhoaHoc.Caption = "Tên khóa học";
+            this.TenKhoaHoc.FieldName = "TenKhoaHoc";
+            this.TenKhoaHoc.MinWidth = 25;
+            this.TenKhoaHoc.Name = "TenKhoaHoc";
+            this.TenKhoaHoc.Visible = true;
+            this.TenKhoaHoc.VisibleIndex = 3;
+            this.TenKhoaHoc.Width = 94;
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.Caption = "Ngày Lập";
+            this.NgayLap.FieldName = "NgayLap";
+            this.NgayLap.MinWidth = 25;
+            this.NgayLap.Name = "NgayLap";
+            this.NgayLap.Visible = true;
+            this.NgayLap.VisibleIndex = 4;
+            this.NgayLap.Width = 94;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.Caption = "Thành Tiền";
+            this.ThanhTien.FieldName = "ThanhTien";
+            this.ThanhTien.MinWidth = 25;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.Visible = true;
+            this.ThanhTien.VisibleIndex = 5;
+            this.ThanhTien.Width = 94;
+            // 
             // QuanLyHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -629,5 +703,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraGrid.Columns.GridColumn SoHoaDon;
+        private DevExpress.XtraGrid.Columns.GridColumn MaHocVien;
+        private DevExpress.XtraGrid.Columns.GridColumn MaKhoaHoc;
+        private DevExpress.XtraGrid.Columns.GridColumn TenKhoaHoc;
+        private DevExpress.XtraGrid.Columns.GridColumn NgayLap;
+        private DevExpress.XtraGrid.Columns.GridColumn ThanhTien;
     }
 }
