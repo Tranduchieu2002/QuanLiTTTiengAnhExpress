@@ -1,6 +1,8 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
 using H3CExpress.Data.NewEntities;
+using H3CExpress.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +11,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using GridView = DevExpress.XtraGrid.Views.Grid.GridView;
 
 namespace H3CExpress.UserControls
 {
@@ -123,9 +127,10 @@ namespace H3CExpress.UserControls
                     this.hoaDonList.DataSource = null;
                     var data = context.HoaDons.Select(hd => new
                     {
-                        hd.SoHoaDon,
+                        SoHoaDon = hd.SoHoaDon,
                         MaHocVien = hd.MaKH,
                         MaKhoaHoc = hd.MaHang,
+                        TenKhoaHoc = hd.courses.name,
                         hd.MaNV,
                         hd.ThanhTien,
                         hd.NgayLap,
@@ -236,6 +241,23 @@ namespace H3CExpress.UserControls
                     Utils.ShowMessError("Thêm hóa đơn thất bại!!!");
                 }
             }
+        }
+
+        private void guna2GradientButton4_Click(object sender, EventArgs e)
+        {
+
+            var selectedRows = gridView2.GetSelectedRows();
+
+            // Loop through the selected rows and do something with each row
+            foreach (var rowHandle in selectedRows)
+            {
+                // Get the values of the selected row using the row handle
+                var id = int.Parse(gridView2.GetRowCellValue(rowHandle, "SoHoaDon").ToString());
+
+                HoaDonReport donReport = new HoaDonReport(id);
+                donReport.ShowPreviewDialog();
+                // Do something with the row values
+                }
         }
     }
 }

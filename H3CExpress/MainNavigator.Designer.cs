@@ -63,7 +63,7 @@
             // 
             // accordionControl1
             // 
-            this.accordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(141)))), ((int)(((byte)(114)))));
+            this.accordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.DodgerBlue;
             this.accordionControl1.Appearance.AccordionControl.BorderColor = System.Drawing.Color.White;
             this.accordionControl1.Appearance.AccordionControl.Options.UseBackColor = true;
             this.accordionControl1.Appearance.AccordionControl.Options.UseBorderColor = true;
@@ -170,6 +170,7 @@
             this.ReportControls.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.classReport,
             this.studentReport});
+            this.ReportControls.Expanded = true;
             this.ReportControls.Name = "ReportControls";
             this.ReportControls.Text = "Báo cáo thống kê";
             // 

@@ -14,8 +14,8 @@ namespace H3CExpress
         CapNhatNhanVien updateNhanVien;
         DanhGiaHocSinh danhGiaHocSinh;
         QuanLyHoaDon quanLyHoaDon;
-        CapNhatKhoaHoc quanLyKhoaHoc;
-        QuanLyDiem quanLyDiem;
+        CapNhatKhoaHoc CapNhatKhoaHoc;
+        CapNhatDiemControl CapNhatDiemControl;
         public MainNavigator()
         {
             InitializeComponent();
@@ -74,12 +74,12 @@ namespace H3CExpress
 
         private void accordionControlElement2_Click(object sender, EventArgs e)
         {
-            if (quanLyDiem == null)
+            if (CapNhatDiemControl == null)
             {
-                quanLyDiem = new QuanLyDiem();
-                LoadToPanel(quanLyDiem);
+                CapNhatDiemControl = new CapNhatDiemControl();
+                LoadToPanel(CapNhatDiemControl);
             }
-            else quanLyDiem.BringToFront();
+            else CapNhatDiemControl.BringToFront();
         }
 
         private void accordionControlElement1_Click(object sender, EventArgs e)
@@ -107,12 +107,12 @@ namespace H3CExpress
         private void accordionControlElement3_Click(object sender, EventArgs e)
         {
 
-            if (quanLyKhoaHoc == null)
+            if (CapNhatKhoaHoc == null)
             {
-                quanLyKhoaHoc = new CapNhatKhoaHoc();
-                LoadToPanel(quanLyKhoaHoc);
+                CapNhatKhoaHoc = new CapNhatKhoaHoc();
+                LoadToPanel(CapNhatKhoaHoc);
             }
-            else quanLyKhoaHoc.BringToFront();
+            else CapNhatKhoaHoc.BringToFront();
         }
     }
 }
