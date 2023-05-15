@@ -23,19 +23,20 @@ namespace H3CExpress.FormSchema
     {
         int? id;
         classes classInstance;
-        public UpdateClass(int? classId)
+        public UpdateClass(int classId = -1)
         {
-         
+
             InitializeComponent();
 
-            if(classId != null) {
+            if (classId != -1)
+            {
                 id = (int)classId;
             }
-            
+
         }
         void loadClassInfo(NewAppContext context, int? id)
         {
-            if(id == null)
+            if (id == null)
             {
                 return;
             }
@@ -55,8 +56,7 @@ namespace H3CExpress.FormSchema
         {
             startDateEdit.DateTime = classInstance.start_time;
             endDateEdit.DateTime = classInstance.end_time;
-            System.DateTime dateTime = System.DateTime.MinValue.Add(classInstance.learning_time);
-            learingTimeTb.DateTime = dateTime;
+            dateTimePicker1.Value = DateTime.Today.Add(formatTime(classInstance.learning_time));
 
             idClassLabel.Text = classInstance.id.ToString();
 
@@ -80,7 +80,7 @@ namespace H3CExpress.FormSchema
             {
                 LoadCourseComboBox(context);
                 LoadTeacherComboBox(context);
-                if(id != null)
+                if (id != null)
                 {
                     loadClassInfo(context, id);
                     return;
@@ -126,17 +126,6 @@ namespace H3CExpress.FormSchema
                 comboBox.SelectedIndex = index;
             }
         }
-
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelControl11_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         public bool CheckAllTextboxValid()
         {
 
@@ -161,7 +150,7 @@ namespace H3CExpress.FormSchema
                         break;
                     }
                 }
-                
+
             }
 
             if (!allValid)
@@ -172,11 +161,16 @@ namespace H3CExpress.FormSchema
             return allValid;
 
         }
-        System.TimeSpan getSelectedHours()
+        public TimeSpan formatTime(TimeSpan time)
         {
-            System.DateTime selectedTime = learingTimeTb.DateTime;
-            System.TimeSpan timeSpan = System.DateTime.Now.TimeOfDay - selectedTime.TimeOfDay;
-            return timeSpan;
+            int totalSeconds = (int)time.TotalSeconds;
+            return TimeSpan.FromSeconds(totalSeconds);
+        }
+        public TimeSpan getTime(DateTimePicker time)
+        {
+            DateTime selectedDateTime = time.Value;
+            TimeSpan timeOfDay = selectedDateTime.TimeOfDay;
+            return formatTime(timeOfDay);
         }
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -188,12 +182,13 @@ namespace H3CExpress.FormSchema
                 string name = nameEdit.Text.Trim();
                 DateTime startDate = startDateEdit.DateTime;
                 DateTime endDate = endDateEdit.DateTime;
-                TimeSpan learingTime = getSelectedHours();
+                TimeSpan learingTime = getTime(dateTimePicker1);
                 var teacherId = giaovienCbb.SelectedIndex == -1 ? -1 : int.Parse(giaovienCbb.SelectedValue.ToString());
 
-                using (var context= new NewAppContext())
+                using (var context = new NewAppContext())
                 {
-                    if(string.IsNullOrEmpty(idClass)) {
+                    if (string.IsNullOrEmpty(idClass))
+                    {
 
                         classes ClassIns = new classes
                         {
@@ -244,17 +239,23 @@ namespace H3CExpress.FormSchema
             }
         }
 
-        private void sisoLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(id != null)
+            if (id != null)
             {
-                using(var context = new NewAppContext())
+                using (var context = new NewAppContext())
                 {
+                    var isUserInClass = context.users
+                    .Where(u => context.ClassUser.Any(cu => cu.ClassId == id && cu.UserId == u.id))
+                    .Where(u => u.roles.name == "USER").Count();
+                    MessageBox.Show(isUserInClass.ToString());
+                    if (isUserInClass > 0)
+                    {
+                        Utils.ShowMessWarn("Lớp đang có học viên không thể xóa!!!");
+                        return;
+                    }
+                    else MessageBox.Show("Lop ko co ai");
+
                     classes lophoc = context.classes.Find(id);
                     DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -275,8 +276,10 @@ namespace H3CExpress.FormSchema
 
                     this.Hide();
                 }
-            } else {
-                    MessageBox.Show("Chưa có thông tin lớp học !");
+            }
+            else
+            {
+                MessageBox.Show("Chưa có thông tin lớp học !");
             }
         }
     }

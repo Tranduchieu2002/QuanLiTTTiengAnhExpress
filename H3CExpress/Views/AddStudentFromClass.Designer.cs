@@ -64,20 +64,22 @@
             // 
             this.groupControl1.Controls.Add(this.simpleButton1);
             this.groupControl1.Controls.Add(this.usersGridView);
-            this.groupControl1.Location = new System.Drawing.Point(28, 34);
+            this.groupControl1.Location = new System.Drawing.Point(21, 28);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(534, 569);
+            this.groupControl1.Size = new System.Drawing.Size(400, 462);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách học sinh chưa học trong lớp";
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Be Vietnam Pro Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(291, 498);
+            this.simpleButton1.Location = new System.Drawing.Point(218, 405);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(203, 44);
+            this.simpleButton1.Size = new System.Drawing.Size(152, 36);
             this.simpleButton1.TabIndex = 72;
             this.simpleButton1.Text = "Thêm học sinh";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -88,7 +90,7 @@
             this.usersGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -103,7 +105,7 @@
             this.email});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -111,13 +113,14 @@
             this.usersGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.usersGridView.Dock = System.Windows.Forms.DockStyle.Top;
             this.usersGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.usersGridView.Location = new System.Drawing.Point(2, 28);
+            this.usersGridView.Location = new System.Drawing.Point(2, 23);
+            this.usersGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usersGridView.MultiSelect = false;
             this.usersGridView.Name = "usersGridView";
             this.usersGridView.RowHeadersVisible = false;
             this.usersGridView.RowHeadersWidth = 32;
             this.usersGridView.RowTemplate.Height = 28;
-            this.usersGridView.Size = new System.Drawing.Size(530, 452);
+            this.usersGridView.Size = new System.Drawing.Size(396, 367);
             this.usersGridView.TabIndex = 71;
             this.usersGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.usersGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -173,20 +176,22 @@
             // 
             this.groupControl2.Controls.Add(this.simpleButton2);
             this.groupControl2.Controls.Add(this.guna2DataGridView1);
-            this.groupControl2.Location = new System.Drawing.Point(618, 34);
+            this.groupControl2.Location = new System.Drawing.Point(464, 28);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(534, 569);
+            this.groupControl2.Size = new System.Drawing.Size(400, 462);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Thông tin học vien có trong khóa học";
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Be Vietnam Pro Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(37, 498);
+            this.simpleButton2.Location = new System.Drawing.Point(28, 405);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(191, 44);
+            this.simpleButton2.Size = new System.Drawing.Size(143, 36);
             this.simpleButton2.TabIndex = 73;
             this.simpleButton2.Text = "Xóa học sinh";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -197,7 +202,7 @@
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -214,7 +219,7 @@
             this.dataGridViewTextBoxColumn3});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -222,13 +227,14 @@
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(2, 28);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(2, 23);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2DataGridView1.MultiSelect = false;
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 32;
             this.guna2DataGridView1.RowTemplate.Height = 28;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(530, 452);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(396, 367);
             this.guna2DataGridView1.TabIndex = 72;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -296,24 +302,26 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Be Vietnam Pro SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Olive;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(449, -2);
+            this.labelControl1.Location = new System.Drawing.Point(337, -2);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(294, 30);
+            this.labelControl1.Size = new System.Drawing.Size(237, 20);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Thêm học sinh vào danh sách";
             // 
             // AddStudentFromClass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 628);
+            this.ClientSize = new System.Drawing.Size(944, 510);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddStudentFromClass";
             this.Text = "AddStudentFromClass";
             this.Load += new System.EventHandler(this.AddStudentFromClass_Load);

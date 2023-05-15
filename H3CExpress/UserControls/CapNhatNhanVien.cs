@@ -27,19 +27,27 @@ namespace H3CExpress.UserControls
         {
             using (var context = new NewAppContext())
             {
-                this.gridControl1.DataSource = null;
-                var teacherList = context.users.Where(u => u.roles.Code == "EMP").Select(u =>
-                   new
-                   {
-                       u.id,
-                       u.name,
-                       u.gender,
-                       u.username,
-                       u.email,
-                       chucvu = u.roles.name,
-                   });
-                var a = teacherList.Take(10).ToList();
-                this.gridControl1.DataSource = a;
+                try
+                {
+                    this.gridControl1.DataSource = null;
+                    var nhanVienList = context.users.Where(u => u.roles.Code == "EMP").Select(u =>
+                       new
+                       {
+                           u.id,
+                           u.name,
+                           u.gender,
+                           u.username,
+                           u.email,
+                           chucvu = u.roles.name,
+                       });
+                    var a = nhanVienList.Take(10).ToList();
+                    this.gridControl1.DataSource = a;
+                }
+                catch
+                {
+                    Utils.ShowMessError("Có lỗi xảy ra khi lấy dữ liệu!!!");
+
+                }
             }
         }
 

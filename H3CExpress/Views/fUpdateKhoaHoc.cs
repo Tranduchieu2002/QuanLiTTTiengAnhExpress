@@ -17,6 +17,8 @@ namespace H3CExpress.Views
         public fUpdateKhoaHoc(string id = "")
         {
             InitializeComponent();
+            nbGiaTien.Maximum = 999999;
+            nbGiaTien.Minimum = 0;
             bool isEdit = !id.Equals("");
             if (!isEdit)
             {
@@ -24,6 +26,7 @@ namespace H3CExpress.Views
                 return;
             }
             updateValue(id);
+
             btnThem.Enabled = false;
         }
         public void updateValue(string id)

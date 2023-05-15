@@ -1,9 +1,7 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraReports.UI;
 using H3CExpress.Data.NewEntities;
-using H3CExpress.Reports;
 using H3CExpress.Views;
 using System;
 using System.Collections.Generic;
@@ -18,26 +16,11 @@ using System.Windows.Forms;
 
 namespace H3CExpress.UserControls
 {
-    public partial class CapNhatNguoiDung : DevExpress.XtraEditors.XtraUserControl
+    public partial class CapNhatKhoaHoc : DevExpress.XtraEditors.XtraUserControl
     {
-        public CapNhatNguoiDung()
+        public CapNhatKhoaHoc()
         {
             InitializeComponent();
-        }
-
-
-        private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            fUpadtePerson f = new fUpadtePerson("USR");
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-            loadData();
-        }
-
-        private void gridControl_Load(object sender, EventArgs e)
-        {
-            loadData();
         }
         void loadData()
 
@@ -46,19 +29,15 @@ namespace H3CExpress.UserControls
             {
                 try
                 {
-
                     this.gridControl1.DataSource = null;
-                    var userList = context.users.Where(u => u.roles.Code == "USR").Select(u =>
-                       new
-                       {
-                           u.id,
-                           u.name,
-                           u.gender,
-                           u.username,
-                           u.email,
-                       });
-                    var a = userList.Take(10).ToList();
-                    this.gridControl1.DataSource = a;
+                    var khoaHocList = context.courses.Select(c => new
+                    {
+                        c.id,
+                        c.name,
+                        c.description,
+                        c.totalAmount
+                    }).ToList();
+                    this.gridControl1.DataSource = khoaHocList;
                 }
                 catch
                 {
@@ -67,14 +46,25 @@ namespace H3CExpress.UserControls
             }
         }
 
+
+        private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            fUpdateKhoaHoc f = new fUpdateKhoaHoc();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+            loadData();
+        }
+
         private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
+
             GridView gridView = gridControl1.MainView as GridView;
             var selectRows = gridView.GetSelectedRows();
             foreach (var rowHandle in selectRows)
             {
                 var id = gridView.GetRowCellValue(rowHandle, "id").ToString();
-                fUpadtePerson f = new fUpadtePerson("USR", id);
+                fUpdateKhoaHoc f = new fUpdateKhoaHoc(id);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
@@ -90,14 +80,14 @@ namespace H3CExpress.UserControls
             {
                 var id = int.Parse(gridView.GetRowCellValue(rowHandle, "id").ToString());
                 string name = gridView.GetRowCellValue(rowHandle, "name").ToString();
-                DialogResult r = Utils.ShowMessWarn("Bạn có muốn xóa User  " + name);
+                DialogResult r = Utils.ShowMessWarn("Bạn có muốn xóa khóa học " + name);
                 if (r == DialogResult.Cancel) return;
                 using (var context = new NewAppContext())
                 {
                     try
                     {
-                        var dataToDelete = context.users.Find(id);
-                        context.users.Remove(dataToDelete);
+                        var dataToDelete = context.courses.Find(id);
+                        context.courses.Remove(dataToDelete);
                         context.SaveChanges();
                         Utils.ShowMessInfo("Xóa thành công!!!");
                     }
@@ -115,11 +105,9 @@ namespace H3CExpress.UserControls
             loadData();
         }
 
-        private void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
+        private void CapNhatKhoaHoc_Load(object sender, EventArgs e)
         {
-            usersReport usersReport = new usersReport();
-            usersReport.ShowPreview();
-
+            loadData();
         }
     }
 }

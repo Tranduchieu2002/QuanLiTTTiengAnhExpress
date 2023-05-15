@@ -1,4 +1,4 @@
-﻿namespace H3CExpress.UserControls
+﻿namespace H3CExpress.FormSchema
 {
     partial class QuanLyDiem
     {
@@ -28,6 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.PanelControl panelControl1;
+            this.cbLop = new System.Windows.Forms.ComboBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.guna2NumericUpDown4 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.lbMalop = new DevExpress.XtraEditors.LabelControl();
+            this.lbTenHocVien = new DevExpress.XtraEditors.LabelControl();
+            this.lbTenLop = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.guna2NumericUpDown3 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.guna2NumericUpDown2 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
@@ -37,16 +63,9 @@
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.cbLop = new System.Windows.Forms.ComboBox();
-            this.pQuanLyDiem = new DevExpress.XtraEditors.PanelControl();
-            this.pInfo = new DevExpress.XtraEditors.PanelControl();
-            this.lbMalop = new DevExpress.XtraEditors.LabelControl();
-            this.lbTenHocVien = new DevExpress.XtraEditors.LabelControl();
-            this.lbTenLop = new DevExpress.XtraEditors.LabelControl();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.lbMahocvien = new DevExpress.XtraEditors.LabelControl();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.writing = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -84,7 +103,237 @@
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pQuanLyDiem)).BeginInit();
+            this.pQuanLyDiem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pInfo)).BeginInit();
+            this.pInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelControl1
+            // 
+            panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            panelControl1.Controls.Add(this.cbLop);
+            panelControl1.Controls.Add(this.labelControl1);
+            panelControl1.Controls.Add(this.labelControl2);
+            panelControl1.Location = new System.Drawing.Point(2, 2);
+            panelControl1.Name = "panelControl1";
+            panelControl1.Size = new System.Drawing.Size(207, 423);
+            panelControl1.TabIndex = 11;
+            // 
+            // cbLop
+            // 
+            this.cbLop.FormattingEnabled = true;
+            this.cbLop.Location = new System.Drawing.Point(63, 70);
+            this.cbLop.Name = "cbLop";
+            this.cbLop.Size = new System.Drawing.Size(121, 21);
+            this.cbLop.TabIndex = 2;
+            this.cbLop.SelectedIndexChanged += new System.EventHandler(this.cbLop_SelectedIndexChanged);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(12, 18);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(80, 13);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Tìm kiếm lớp học";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(12, 72);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(18, 13);
+            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Text = "Lớp";
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 580);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1047, 20);
+            // 
+            // guna2NumericUpDown4
+            // 
+            this.guna2NumericUpDown4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown4.Location = new System.Drawing.Point(97, 361);
+            this.guna2NumericUpDown4.Name = "guna2NumericUpDown4";
+            this.guna2NumericUpDown4.Size = new System.Drawing.Size(109, 26);
+            this.guna2NumericUpDown4.TabIndex = 15;
+            // 
+            // lbMalop
+            // 
+            this.lbMalop.Location = new System.Drawing.Point(0, 29);
+            this.lbMalop.Name = "lbMalop";
+            this.lbMalop.Size = new System.Drawing.Size(67, 13);
+            this.lbMalop.TabIndex = 17;
+            this.lbMalop.Text = "labelControl17";
+            // 
+            // lbTenHocVien
+            // 
+            this.lbTenHocVien.Location = new System.Drawing.Point(3, 167);
+            this.lbTenHocVien.Name = "lbTenHocVien";
+            this.lbTenHocVien.Size = new System.Drawing.Size(67, 13);
+            this.lbTenHocVien.TabIndex = 20;
+            this.lbTenHocVien.Text = "labelControl18";
+            // 
+            // lbTenLop
+            // 
+            this.lbTenLop.Location = new System.Drawing.Point(3, 75);
+            this.lbTenLop.Name = "lbTenLop";
+            this.lbTenLop.Size = new System.Drawing.Size(67, 13);
+            this.lbTenLop.TabIndex = 18;
+            this.lbTenLop.Text = "labelControl17";
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(0, 367);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(44, 13);
+            this.labelControl16.TabIndex = 14;
+            this.labelControl16.Text = "Điểm viết";
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Location = new System.Drawing.Point(221, 326);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(24, 13);
+            this.labelControl13.TabIndex = 13;
+            this.labelControl13.Text = "Điếm";
+            // 
+            // guna2NumericUpDown3
+            // 
+            this.guna2NumericUpDown3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown3.Location = new System.Drawing.Point(97, 313);
+            this.guna2NumericUpDown3.Name = "guna2NumericUpDown3";
+            this.guna2NumericUpDown3.Size = new System.Drawing.Size(109, 26);
+            this.guna2NumericUpDown3.TabIndex = 12;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Location = new System.Drawing.Point(0, 321);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(46, 13);
+            this.labelControl14.TabIndex = 11;
+            this.labelControl14.Text = "Điểm đọc";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Location = new System.Drawing.Point(221, 288);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(24, 13);
+            this.labelControl11.TabIndex = 10;
+            this.labelControl11.Text = "Điếm";
+            // 
+            // guna2NumericUpDown2
+            // 
+            this.guna2NumericUpDown2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown2.Location = new System.Drawing.Point(97, 264);
+            this.guna2NumericUpDown2.Name = "guna2NumericUpDown2";
+            this.guna2NumericUpDown2.Size = new System.Drawing.Size(109, 26);
+            this.guna2NumericUpDown2.TabIndex = 9;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(0, 275);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(41, 13);
+            this.labelControl12.TabIndex = 8;
+            this.labelControl12.Text = "Điểm nói";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(221, 237);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(24, 13);
+            this.labelControl10.TabIndex = 7;
+            this.labelControl10.Text = "Điếm";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(0, 229);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(51, 13);
+            this.labelControl9.TabIndex = 5;
+            this.labelControl9.Text = "Điểm nghe";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(0, 183);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(63, 13);
+            this.labelControl8.TabIndex = 4;
+            this.labelControl8.Text = "Tên học viên";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(0, 137);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(59, 13);
+            this.labelControl7.TabIndex = 3;
+            this.labelControl7.Text = "Mã học viên";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(0, 91);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(36, 13);
+            this.labelControl6.TabIndex = 2;
+            this.labelControl6.Text = "Tên lớp";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(0, 45);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(32, 13);
+            this.labelControl5.TabIndex = 1;
+            this.labelControl5.Text = "Mã lớp";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(0, 5);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(68, 13);
+            this.labelControl4.TabIndex = 0;
+            this.labelControl4.Text = "Điểm học viên";
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl3.Controls.Add(this.gridControl1);
+            this.panelControl3.Controls.Add(this.labelControl3);
+            this.panelControl3.Location = new System.Drawing.Point(207, 2);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(575, 423);
+            this.panelControl3.TabIndex = 13;
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gridControl1.Location = new System.Drawing.Point(0, 55);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.MenuManager = this.ribbonControl;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(575, 368);
+            this.gridControl1.TabIndex = 1;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // ribbonControl
             // 
@@ -170,7 +419,7 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Print and Export";
             // 
-            // ribbonStatusBar
+            // ribbonStatusBar1
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.bsiRecordsCount);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 707);
@@ -179,7 +428,7 @@
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1295, 30);
             // 
-            // labelControl1
+            // labelControl3
             // 
             this.labelControl1.Location = new System.Drawing.Point(14, 20);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
@@ -188,7 +437,7 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tim kiem lop hoc";
             // 
-            // labelControl2
+            // guna2NumericUpDown1
             // 
             this.labelControl2.Location = new System.Drawing.Point(14, 86);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
@@ -197,7 +446,7 @@
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Lop";
             // 
-            // panelControl1
+            // lbMahocvien
             // 
             this.panelControl1.Controls.Add(this.cbLop);
             this.panelControl1.Controls.Add(this.labelControl1);
@@ -209,7 +458,7 @@
             this.panelControl1.Size = new System.Drawing.Size(386, 514);
             this.panelControl1.TabIndex = 4;
             // 
-            // cbLop
+            // labelControl15
             // 
             this.cbLop.FormattingEnabled = true;
             this.cbLop.Location = new System.Drawing.Point(74, 86);
@@ -221,6 +470,8 @@
             // 
             // pQuanLyDiem
             // 
+            this.pQuanLyDiem.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pQuanLyDiem.Controls.Add(this.panelControl4);
             this.pQuanLyDiem.Controls.Add(this.pInfo);
             this.pQuanLyDiem.Controls.Add(this.labelControl15);
             this.pQuanLyDiem.Controls.Add(this.writing);
@@ -259,7 +510,7 @@
             this.pInfo.Size = new System.Drawing.Size(284, 204);
             this.pInfo.TabIndex = 21;
             // 
-            // lbMalop
+            // panelControl2
             // 
             this.lbMalop.Location = new System.Drawing.Point(16, 53);
             this.lbMalop.Margin = new System.Windows.Forms.Padding(4);
@@ -268,7 +519,7 @@
             this.lbMalop.TabIndex = 17;
             this.lbMalop.Text = "labelControl17";
             // 
-            // lbTenHocVien
+            // panelControl4
             // 
             this.lbTenHocVien.Location = new System.Drawing.Point(16, 182);
             this.lbTenHocVien.Margin = new System.Windows.Forms.Padding(4);
@@ -511,13 +762,21 @@
             this.Controls.Add(this.ribbonControl);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyDiem";
-            this.Ribbon = this.ribbonControl;
-            this.StatusBar = this.ribbonStatusBar;
-            this.Load += new System.EventHandler(this.QuanLyDiem_Load);
+            this.Size = new System.Drawing.Size(1047, 600);
+            this.Load += new System.EventHandler(this.XtraUserControl1_Load);
+            ((System.ComponentModel.ISupportInitialize)(panelControl1)).EndInit();
+            panelControl1.ResumeLayout(false);
+            panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
+            this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pQuanLyDiem)).EndInit();
             this.pQuanLyDiem.ResumeLayout(false);
             this.pQuanLyDiem.PerformLayout();
@@ -572,13 +831,15 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl lbTenHocVien;
-        private DevExpress.XtraEditors.LabelControl lbMahocvien;
-        private DevExpress.XtraEditors.LabelControl lbTenLop;
-        private DevExpress.XtraEditors.LabelControl lbMalop;
-        private DevExpress.XtraEditors.PanelControl pInfo;
-        private System.Windows.Forms.ComboBox cbLop;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private DevExpress.XtraEditors.LabelControl lbMahocvien;
+        private System.Windows.Forms.ComboBox cbLop;
+        private DevExpress.XtraEditors.PanelControl pInfo;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
     }
 }

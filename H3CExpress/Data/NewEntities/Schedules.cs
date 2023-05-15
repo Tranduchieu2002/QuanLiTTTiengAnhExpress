@@ -15,6 +15,5 @@ namespace H3CExpress.Data.NewEntities
         public DateTime end_time { get; set; }
 
         public TimeSpan learning_time { get; set; }
-
     }
 }
