@@ -152,6 +152,12 @@
     <Compile Include="FormSchema\UpdateClass.Designer.cs">
       <DependentUpon>UpdateClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSchema\QuanLyDiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormSchema\QuanLyDiem.Designer.cs">
+      <DependentUpon>QuanLyDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainNavigator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,12 @@
     </Compile>
     <Compile Include="UserControls\CapNhatGiangVien.Designer.cs">
       <DependentUpon>CapNhatGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CapNhatKhoaHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CapNhatKhoaHoc.Designer.cs">
+      <DependentUpon>CapNhatKhoaHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\QuanLyHoaDon.cs">
       <SubType>UserControl</SubType>
@@ -200,12 +212,6 @@
       <DependentUpon>DanhGiaHocSinh.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\PersistentClass1.cs" />
-    <Compile Include="UserControls\QuanLyDiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserControls\QuanLyDiem.Designer.cs">
-      <DependentUpon>QuanLyDiem.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UpdateClassesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -271,6 +277,9 @@
     <EmbeddedResource Include="FormSchema\UpdateClass.resx">
       <DependentUpon>UpdateClass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSchema\QuanLyDiem.resx">
+      <DependentUpon>QuanLyDiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainNavigator.resx">
       <DependentUpon>MainNavigator.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +300,9 @@
     <EmbeddedResource Include="UserControls\CapNhatGiangVien.resx">
       <DependentUpon>CapNhatGiangVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CapNhatKhoaHoc.resx">
+      <DependentUpon>CapNhatKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CapNhatNguoiDung.resx">
       <DependentUpon>CapNhatNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,9 +314,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\QuanLyKhoaHoc.resx">
       <DependentUpon>QuanLyKhoaHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\QuanLyDiem.resx">
-      <DependentUpon>QuanLyDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ClassUserView.resx">
       <DependentUpon>ClassUserView.cs</DependentUpon>

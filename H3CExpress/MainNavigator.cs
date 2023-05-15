@@ -1,4 +1,5 @@
-﻿using H3CExpress.UserControls;
+﻿using H3CExpress.FormSchema;
+using H3CExpress.UserControls;
 using System;
 using System.Windows.Forms;
 
@@ -13,7 +14,8 @@ namespace H3CExpress
         CapNhatNhanVien updateNhanVien;
         DanhGiaHocSinh danhGiaHocSinh;
         QuanLyHoaDon quanLyHoaDon;
-        QuanLyKhoaHoc quanLyKhoaHoc;
+        CapNhatKhoaHoc quanLyKhoaHoc;
+        QuanLyDiem quanLyDiem;
         public MainNavigator()
         {
             InitializeComponent();
@@ -72,7 +74,12 @@ namespace H3CExpress
 
         private void accordionControlElement2_Click(object sender, EventArgs e)
         {
-
+            if (quanLyDiem == null)
+            {
+                quanLyDiem = new QuanLyDiem();
+                LoadToPanel(quanLyDiem);
+            }
+            else quanLyDiem.BringToFront();
         }
 
         private void accordionControlElement1_Click(object sender, EventArgs e)
@@ -99,10 +106,10 @@ namespace H3CExpress
 
         private void accordionControlElement3_Click(object sender, EventArgs e)
         {
-      
+
             if (quanLyKhoaHoc == null)
             {
-                quanLyKhoaHoc = new QuanLyKhoaHoc();
+                quanLyKhoaHoc = new CapNhatKhoaHoc();
                 LoadToPanel(quanLyKhoaHoc);
             }
             else quanLyKhoaHoc.BringToFront();
