@@ -25,56 +25,41 @@ namespace H3CExpress.UserControls
         {
 
         }
-        void loadClass(NewAppContext context)
+        void loadClass()
         {
-            var users = from c in context.classes
-                        select new
-                        {
-                            c.id,
-                            c.name,
-                            teacherName = c.Teacher.name,
-                            courseName = c.courses.name,
-                            startDate = c.start_time,
-                            endDate = c.end_time,
-                            schedule = c.learning_time
-                        };
-            var a = users.Take(10).ToList();
-            this.gridControl.DataSource = a;
-            bsiRecordsCount.Caption = "Tổng số lớp học : " + a.Count;
+            using (var context = new NewAppContext())
+            {
+                this.gridControl.DataSource = null;
+                var users = from c in context.classes
+                            select new
+                            {
+                                c.id,
+                                c.name,
+                                teacherName = c.Teacher.name,
+                                courseName = c.courses.name,
+                                startDate = c.start_time,
+                                endDate = c.end_time,
+                                schedule = c.learning_time
+                            };
+                var a = users.Take(10).ToList();
+                this.gridControl.DataSource = a;
+                bsiRecordsCount.Caption = "Tổng số lớp học : " + a.Count;
+            }
         }
 
-        void loadClasses(NewAppContext context)
-        {
 
-            loadClass(context);
-
-            var courses = from c in context.courses
-                          select new
-                          {
-                              c.id,
-                              c.name,
-                              c.description,
-                              c.totalAmount
-                          };
-
-            /*this.listCourseComboBox.DataSource = courses.Take(10).ToList();
-            loadGVToCombobox();*/
-        }
 
 
         private void UpdateClassesControl_Load(object sender, EventArgs e)
         {
-            using (var context = new NewAppContext())
-            {
-                loadClasses(context);
-            }
+            loadClass();
         }
 
         private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-            UpdateClass updateClass = new UpdateClass(null);
-
+            UpdateClass updateClass = new UpdateClass();
             updateClass.ShowDialog();
+            loadClass();
         }
 
         private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
@@ -95,26 +80,24 @@ namespace H3CExpress.UserControls
 
                 updateClass.Close();
             }
+            loadClass();
 
         }
 
         private void bbiRefresh_ItemClick(object sender, ItemClickEventArgs e)
         {
-            using (var context = new NewAppContext())
-            {
-                loadClasses(context);
-            }
+            loadClass();
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
             var selectedRows = gridView.GetSelectedRows();
 
-            if(selectedRows.Count() == 0)
+            if (selectedRows.Count() == 0)
             {
                 MessageBox.Show("Bạn chưa chọn lớp học ");
                 return;
-            } 
+            }
             // Loop through the selected rows and do something with each row
             foreach (var rowHandle in selectedRows)
             {
@@ -137,41 +120,35 @@ namespace H3CExpress.UserControls
                 MessageBox.Show("Bạn chưa chọn lớp học ");
                 return;
             }
-            // Loop through the selected rows and do something with each row
             foreach (var rowHandle in selectedRows)
             {
-                // Get the values of the selected row using the row handle
                 var id = int.Parse(gridView.GetRowCellValue(rowHandle, "id").ToString());
 
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                // Nếu người dùng chọn Yes, tiến hành xóa thông tin
-                if (result == DialogResult.Yes)
+                if (result != DialogResult.Yes) continue;
+                using (var context = new NewAppContext())
                 {
-                    using (var context = new NewAppContext())
+                    var slHocVien = context.classes.Find(id).ClassUser.Count();
+                    if (slHocVien > 0)
                     {
-                        classes lophoc = context.classes.Find(id);
-
-                        if (lophoc != null)
-                        {
-                            context.classes.Remove(lophoc);
-
-                            context.SaveChanges();
-
-                            MessageBox.Show("Xóa lớp học thành công !");
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Chưa có thông tin lớp học !");
-                        }
-                        return;
-                        // Thực hiện xóa thông tin ở đây
+                        Utils.ShowMessError("Lớp đang có học viên không thể xóa!!!");
+                        continue;
                     }
 
+                    classes lophoc = context.classes.FirstOrDefault(c => c.id == id);
+                    if (lophoc != null)
+                    {
+                        context.classes.Remove(lophoc);
+                        context.SaveChanges();
+                        MessageBox.Show("Xóa lớp học thành công !");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Chưa có thông tin lớp học !");
+                    }
+                    loadClass();
                 }
             }
-            
         }
     }
 }
