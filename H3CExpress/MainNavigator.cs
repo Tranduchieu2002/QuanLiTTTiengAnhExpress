@@ -11,7 +11,9 @@ namespace H3CExpress
         CapNhatGiangVien updateGiangVien;
         CapNhatNguoiDung updateNguoiDung;
         CapNhatNhanVien updateNhanVien;
-
+        DanhGiaHocSinh danhGiaHocSinh;
+        QuanLyHoaDon quanLyHoaDon;
+        QuanLyKhoaHoc quanLyKhoaHoc;
         public MainNavigator()
         {
             InitializeComponent();
@@ -66,6 +68,44 @@ namespace H3CExpress
                 LoadToPanel(updateNhanVien);
             }
             else updateNhanVien.BringToFront();
+        }
+
+        private void accordionControlElement2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement1_Click(object sender, EventArgs e)
+        {
+
+            if (danhGiaHocSinh == null)
+            {
+                danhGiaHocSinh = new DanhGiaHocSinh();
+                LoadToPanel(danhGiaHocSinh);
+            }
+            else danhGiaHocSinh.BringToFront();
+
+        }
+
+        private void accordionControlElement5_Click(object sender, EventArgs e)
+        {
+            if (quanLyHoaDon == null)
+            {
+                quanLyHoaDon = new QuanLyHoaDon();
+                LoadToPanel(quanLyHoaDon);
+            }
+            else quanLyHoaDon.BringToFront();
+        }
+
+        private void accordionControlElement3_Click(object sender, EventArgs e)
+        {
+      
+            if (quanLyKhoaHoc == null)
+            {
+                quanLyKhoaHoc = new QuanLyKhoaHoc();
+                LoadToPanel(quanLyKhoaHoc);
+            }
+            else quanLyKhoaHoc.BringToFront();
         }
     }
 }

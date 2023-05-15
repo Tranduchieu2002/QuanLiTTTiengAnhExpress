@@ -181,7 +181,7 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(400, 462);
             this.groupControl2.TabIndex = 1;
-            this.groupControl2.Text = "groupControl2";
+            this.groupControl2.Text = "Thông tin học vien có trong khóa học";
             // 
             // simpleButton2
             // 

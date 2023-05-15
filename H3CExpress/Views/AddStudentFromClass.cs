@@ -46,8 +46,8 @@ namespace H3CExpress.Views
 
             this.guna2DataGridView1.DataSource = listStudent;
             var usersNotInClass = model.users
+                .Where(u => u.roles.Code == "USR")
                 .Where(u => !model.ClassUser.Any(cu => cu.ClassId == ClassInstance.id && cu.UserId == u.id))
-                .Where(u => u.roles.name == "USER")
                     .Select(u => new
                     {
                         studentId = u.id,

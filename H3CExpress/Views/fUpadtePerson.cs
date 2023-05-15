@@ -66,6 +66,7 @@ namespace H3CExpress.Views
                 try
                 {
                     string genderText = cbGender.SelectedItem.ToString();
+
                     users newUser = new users
                     {
                         password = tbPassword.Text,

@@ -172,7 +172,7 @@ namespace H3CExpress.FormSchema
             TimeSpan timeOfDay = selectedDateTime.TimeOfDay;
             return formatTime(timeOfDay);
         }
-        private async void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bool valid = CheckAllTextboxValid();
 
