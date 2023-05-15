@@ -43,7 +43,6 @@
             this.CoursePrice = new DevExpress.XtraReports.UI.XRTableCell();
             this.oDataServerModeSource1 = new DevExpress.Data.ODataLinq.ODataServerModeSource();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.userDataSet1 = new H3CExpress.Reports.UserDataSet();
             this.bindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
@@ -63,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oDataServerModeSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -142,21 +140,6 @@
             this.CoursePrice.Multiline = true;
             this.CoursePrice.Name = "CoursePrice";
             this.CoursePrice.Weight = 1D;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = this.userDataSet1;
-            this.bindingSource1.Position = 0;
-            // 
-            // userDataSet1
-            // 
-            this.userDataSet1.DataSetName = "UserDataSet";
-            this.userDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bindingSource5
-            // 
-            this.bindingSource5.DataSource = this.userDataSet1;
-            this.bindingSource5.Position = 0;
             // 
             // ReportHeader
             // 
@@ -306,19 +289,13 @@
             this.BottomMargin,
             this.Detail,
             this.ReportHeader});
-            this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.bindingSource1,
-            this.userDataSet1,
-            this.oDataServerModeSource1,
-            this.bindingSource5});
+
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(100F, 100F, 19.16667F, 81.66662F);
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oDataServerModeSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -338,7 +315,6 @@
         private DevExpress.XtraReports.UI.XRTableCell CourseName;
         private DevExpress.XtraReports.UI.XRTableCell CoursePrice;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private UserDataSet userDataSet1;
         private DevExpress.Data.ODataLinq.ODataServerModeSource oDataServerModeSource1;
         private System.Windows.Forms.BindingSource bindingSource5;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;

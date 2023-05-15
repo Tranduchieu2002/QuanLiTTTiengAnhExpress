@@ -37,11 +37,15 @@ namespace H3CExpress.UserControls
                 var listStudent = ClassInstance.ClassUser.Select(u => new
                 {
                     MaChung = u.Id,
-                    studentId = u.UserId,
+                    classId = u.ClassId,
                     studentName = u.users.name,
-                    gender = u.users.gender,
+                    teacherName = u.classes.Teacher.name,
                     className = u.classes.name,
                     courseName = u.classes.courses.name,
+                    schedule = u.classes.learning_time,
+                    startDate = u.classes.start_time,
+                    endDate = u.classes.end_time,
+
                 }).ToList();
 
                 gridControl.DataSource = listStudent;

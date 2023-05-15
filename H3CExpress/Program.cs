@@ -15,11 +15,11 @@ namespace H3CExpress
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login());
+            Application.Run(new Login());
             //Application.Run(new fUpadtePerson("Tea"));
             //Application.Run(new fUpdateKhoaHoc());
             //Application.Run(new QuanLyDiem());
-            Application.Run(new QuanLyBienLai());
+            //Application.Run(new QuanLyBienLai());
         }
     }
 }
